@@ -1,0 +1,103 @@
+.hero {
+   height: 600px;
+   overflow: hidden;
+   position: relative;
+}
+.hero__background {
+   width: 100%;
+   img {
+      display: block;
+      width: 100%;
+   }
+}
+
+.hero__socials {
+   width: 140px;
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   top: 2%;
+   left: 2%;
+   img {
+      cursor: pointer;
+   }
+}
+
+.hero__hamburger {
+   position: absolute;
+   top: 2%;
+   right: 2%;
+   cursor: pointer;
+}
+
+.hero__lining {
+   position: absolute;
+   top: 40%;
+   transform: translatey(-50%);
+   text-align: center;
+   width: 100%;
+}
+.portfolio-lining {
+   display: inline-block;
+}
+
+.hero__arrow {
+   position: absolute;
+   left:50%;
+   bottom: 10%;
+   transform:translatex(-50%);
+
+}
+
+.hero__title {
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translatex(-50%);
+}
+.personality__card {
+   text-align: center;
+}
+
+.personality__img-holder {
+   width: 140px;
+   height: 140px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin: 0 auto;
+}
+
+.personality__photo {
+   display: block;
+   width: 100%;
+}
+
+.personality__name {
+   font-size: 35px;
+   font-weight: medium;
+   @include roboto();
+   color: #fff;
+   margin-top: 20px;
+}
+
+.personality__subtitle {
+   font-size: 16px;
+   font-weight: #fff;
+   @include roboto(light);
+   color: #fff;
+}
+
+// .hero__arrow {
+//    position: absolute;
+//    top: 20%;
+//    left: 50%;
+//    fill: red;
+// }
+
+
+
+
+
+// not clear with import of scss files
+// The hero section.SVG is not responsive.Possible
+// crutches in gulp
