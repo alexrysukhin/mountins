@@ -1,0 +1,64 @@
+.about{
+   width: 100%;
+   display: flex;
+   padding-bottom: 35px;
+}
+.about__left, .about__right {
+   width: 50%;
+   position: relative;
+}
+
+
+.about__left {
+   background: $white;
+
+}
+
+.about__right {
+   background: $beige;
+}
+
+.about__section-title {
+   font-size: 63px;
+   padding: 30px 80px 30px 80px;
+   color: darken($main-font-color,10%)!important;
+   @include background-decor('../../img/decor/about.png');
+}
+.user-about__img-holder {
+   width: 445px;
+   height: 390px;
+   overflow: hidden;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+.user-about__text {
+   width: 450px;
+   margin: 0 auto;
+   p {
+      font-size: 16px;
+      @include roboto(regular);
+      color: $main-font-color;
+      line-height: 24px;
+      margin-bottom: 15px;
+   }
+}
+
+.aboute-data {
+   width: 550px;
+   margin: 0 auto;
+}
+
+.aboute-data__title .subtitle {
+   width: 340px;
+   text-align: center;
+   padding-top: 60px;
+}
+
+.aboute-data__text {
+   font-size: 16px;
+   @include roboto(regular);
+   color: $main-font-color;
+   line-height: 24px;
+   margin-bottom: 15px;
+}

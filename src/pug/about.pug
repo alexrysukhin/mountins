@@ -5,7 +5,7 @@ html(lang="en")
    head
       meta(charset="UTF-8")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
-      link(rel="stylesheet" href="../css/all.min.css")
+      //- link(rel="stylesheet" href="css/all.min.css")
       link(rel="stylesheet" href="../css/style.css")
       title about
    body
@@ -19,7 +19,7 @@ html(lang="en")
          .hero__hamburger
             img(src="../../img/icons/hamburger.svg").hamburger__icon
          .hero__lining
-            img(src="../../img/portfolio_header.png").portfolio-lining
+            img(src="../../img/decor/portfolio_header.png").portfolio-lining
          .hero__title.personality__card
             .personality__img-holder
                img(src="../../img/hero-photo.jpg").personality__photo
@@ -30,3 +30,117 @@ html(lang="en")
 
          .hero__arrow.down-arrow
             img(src="../../img/icons/arrow_down.svg")
+      section.about
+         .about__left
+            svg(viewbox="0 0 1000 100"
+             preserveAspectRatio="none"
+             class="triangle triangle_fill_white about__triangles")
+             polygon(points="0,0 0,100 1000,100")
+            .title.about__section-title
+               |Обо мне
+            .user-about
+               .user-about__img-holder
+                  .user-about__picter
+                     img(src="../../img/hero-photo.jpg")
+               .user-about__title.subtitle
+                  |КТО Я
+               .user-about__text 
+                  p Я веб разработчик из Новосибирска.Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и    современные проекты.
+                  p  Этот сайт я сделал в рамках обучения в Школе онлайн   образования LoftSchool. Чуть позже я освежу в нём свой  контент. А пока посмотрите, как тут всё классно и   красиво!
+                  
+         .about__right
+            svg(viewbox="0 0 1000 100"
+             preserveAspectRatio="none"
+             class="triangle triangle_fill_beige about__triangles")
+             polygon(points="0,100 1000,100 1000,0")
+
+            .aboute-data
+               .aboute-data__description.about-user-info
+                  .aboute-data__title
+                     .subtitle
+                        |Чем я могу быть вам полезен
+                     .aboute-data__text
+                        |Больше всего меня привлекает Frontend разработка,но я также знаком и могу решать не сложные задачи на Backend.Но давайте по порядку.
+               .about-data__content 
+                  ul.skills
+                     li.skills__item
+                        .skills-section
+                           .skill-section__title
+                              |Frontend
+                           ul.skill-section__list
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle"
+                                     viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second circle-5" transform="rotate(-90 55 55)"></circle>
+                                       
+                                    .skill__name
+                                       |HTML5
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |CSS3
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |JavaScript & jQuery
+                     li.skills__item
+                        .skills-section
+                           .skill-section__title
+                              |Backend
+                           ul.skill-section__list
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |php
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |mySQL
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |Node.js & npm
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |Mongo.db
+                     li.skills__item
+                        .skills-section
+                           .skill-section__title
+                              |WorkFlow
+                           ul.skill-section__list
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |Git
+                              li.skill-section__item
+                                 .skill
+                                    svg(class="skill__circle" viewBox="0 0 110 110")
+                                       <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                       <circle r="45" cx="50%" cy="50%"  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                    .skill__name
+                                       |Bower
+                                    

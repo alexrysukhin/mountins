@@ -1,0 +1,25 @@
+ .title {
+   left: 50%;
+   @include centered(x);
+   font-family:  'Bernier';
+   position: relative;
+   display: inline-block;
+   color: $main-font-color;
+   margin-bottom: 23px;
+   
+   
+   &:after,&:before{
+      @include absolute();
+      @include centered(y);
+      width: 22px;
+      height: 5px;
+      background-color: rgba($main-font-color, .4);
+   }
+   &:before {
+      left: 40px;
+   }
+   &:after {
+      right: 40px;
+   }
+   
+}

@@ -10,3 +10,37 @@
 //       font-family: 'robotomedium';
 //    }
 // }
+
+@mixin absolute (){
+   display: block;
+   content: '';
+   position: absolute;
+}
+
+
+//центрирование
+
+@mixin centered($axis:'both'){
+
+   @if $axis == 'both' {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+   @if $axis == 'x' {
+      left: 50%;
+      transform: translatex(-50%);
+      
+   }
+   @if $axis == 'y' {
+      top: 50%;
+      transfotm: translatey(-50%);
+
+   }
+}
+@mixin background-decor($sourse) {
+   background-image: url($sourse);
+   background-size: contain;
+   background-position: center center;
+   background-repeat: no-repeat;
+}

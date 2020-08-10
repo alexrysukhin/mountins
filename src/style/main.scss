@@ -1,11 +1,23 @@
+//colors
+$white: #efeee9;
+$beige: #eeebdf;
+$main-font-color: #455a64;
+
+
+
+
 @import  "_misk/mixin";
 @import  "_misk/fonts";
 @import  "_misk/adjustment";
 
 
 
+// @import "sections/about.scss";
+// @import "sections/about.hero";
+// @import "sections/about.triangles";
 
-@import "sections/hero";
+
+@import "sections/**/*.scss";
 
 
 

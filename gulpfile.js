@@ -135,7 +135,8 @@ var del = require('del');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var plumber = require('gulp-plumber')
+var plumber = require('gulp-plumber');
+var sassGlob = require('gulp-sass-glob')
 
 
 
@@ -154,6 +155,7 @@ gulp.task('sass', function(){
   })
   }))
   .pipe(sourcemaps.init())
+    .pipe(sassGlob())
     .pipe(sass())
     .pipe(concat('style.css'))
     .on('error',notify.onError({
@@ -221,7 +223,7 @@ gulp.task('clean', function(){
 // gulp.task('serve', function(){
 //   browserSync.init({
 //     // open: false,
-//     server: './build'
+//     server: './build/html'
 //   });
 //   browserSync.watch('build', browserSync.reload);
   

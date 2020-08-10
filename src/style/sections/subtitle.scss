@@ -1,0 +1,26 @@
+.subtitle {
+   left: 50%;
+   @include centered(x);
+   line-height: 40px;
+   font-size: 35px;
+   font-family:  'Bernier';
+   color: $main-font-color;
+   position: relative;
+   display: inline-block;
+   padding: 0px 45px;
+   margin-bottom: 30px;
+
+   &:after,&:before{
+      @include absolute();
+      @include centered(y);
+      width: 22px;
+      height: 5px;
+      background-color: rgba($main-font-color, .4);
+   }
+   &:before {
+      left: 0px;
+   }
+   &:after {
+      right: 0px;
+   }
+}
