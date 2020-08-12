@@ -136,8 +136,7 @@ var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
-var sassGlob = require('gulp-sass-glob')
-
+var sassGlob = require('gulp-sass-glob');
 
 
 
@@ -177,14 +176,26 @@ gulp.task('sass', function(){
 
 /////// СКРИПТЫ
 
+// gulp.task('scripts', function(){
+//   return gulp.src(jsFiles)
+//   .pipe(concat('script.js'))
+  
+//   .pipe(uglify({
+//       toplevel: true
+//   }))
+//   .pipe(gulp.dest('build/js'))
+//   .pipe(browserSync.stream());
+// });
+
+
 gulp.task('scripts', function(){
-  return gulp.src('src/scripts/**/*js')
+  return gulp.src('./src/scripts/**/*.js')
   .pipe(concat('all.js'))
   .pipe(uglify({
     toplevel: true
   }))
-  .pipe(gulp.dest('build/js'))
-  .pipe(browserSync.stream()); 
+  .pipe(gulp.dest('./build/js'))
+  // .pipe(browserSync.stream()); 
 });
 
 ///////ПАГ
@@ -233,7 +244,7 @@ gulp.task('clean', function(){
 gulp.task('watch', function(){
   gulp.watch('./src/style/**/*.scss', gulp.series('sass'));
   gulp.watch('./src/pug/*.pug', gulp.series('pug'));
-  gulp.watch('src/scripts/**/*js', gulp.series('scripts'))
+  gulp.watch('./src/scripts/**/*.js', gulp.series('scripts'))
 });
 
 /////TASCK ДЛЯ ЗАПУСКА ВСЕХ ТАСКОВ
