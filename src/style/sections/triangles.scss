@@ -1,14 +1,24 @@
 .triangle {
    width: 100%;
    height: 110px;
-}
-.about__triangles {
    position: absolute;
    bottom: 100%;
 }
+// .about__triangles {
+//    position: absolute;
+//    bottom: 100%;
+// }
+////about-triangles
 .triangle_fill_white {
    fill: $white;
 }
 .triangle_fill_beige {
    fill: $beige;
 }
+
+//////blog-triangles
+
+.triangle-decor {
+   fill: $blog-page-color;
+}
+

@@ -189,13 +189,13 @@ gulp.task('sass', function(){
 
 
 gulp.task('scripts', function(){
-  return gulp.src('./src/scripts/**/*.js')
+  return gulp.src('./src/scripts/*.js')
   .pipe(concat('all.js'))
   .pipe(uglify({
-    toplevel: true
+    mangle:{toplevel: true}
   }))
   .pipe(gulp.dest('./build/js'))
-  // .pipe(browserSync.stream()); 
+  .pipe(browserSync.stream()); 
 });
 
 ///////ПАГ
@@ -244,7 +244,7 @@ gulp.task('clean', function(){
 gulp.task('watch', function(){
   gulp.watch('./src/style/**/*.scss', gulp.series('sass'));
   gulp.watch('./src/pug/*.pug', gulp.series('pug'));
-  gulp.watch('./src/scripts/**/*.js', gulp.series('scripts'))
+  gulp.watch('./src/scripts/*.js', gulp.series('scripts'))
 });
 
 /////TASCK ДЛЯ ЗАПУСКА ВСЕХ ТАСКОВ

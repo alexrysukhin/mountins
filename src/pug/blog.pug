@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title index
+      link(rel="stylesheet" href="../css/style.css")
+   body
+      .wrapper 
+         section.hero-blog
+            .hero-blog__backgtound
+               img(src="../../img/mountains.jpg")
+               include ../sections/socials&hamburger
+            .hero__title
+               .personality__img-holder
+                  img(src="../../img/hero-photo.jpg").personality__photo
+               .hero-blog__text
+                  .blog-text__title.hero-blog__title
+                     |Блог
+                  .blog-title__under
+                     |Статьи, которые я написал
+         section.blog
+            svg(viewbox="0 0 1000 100"
+                  preserveAspectRatio="none"
+                  class="triangle triangle-decor")
+                     polygon(points="0,0 0,100 500,100")
+                     polygon(points="500,100 1000,100 1000,0")
+
+         
+         //- a(href="about.html")
+         //-    |about

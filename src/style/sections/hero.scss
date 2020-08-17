@@ -10,22 +10,26 @@
       width: 100%;
    }
 }
-
+.socials-block {
+   width: 130px;
+   vertical-align: middle;
+   display: flex;
+   justify-content: space-between;
+}
 .hero__socials {
    width: 140px;
+   line-height: 30px;
    display: flex;
    justify-content: space-between;
    position: absolute;
-   top: 2%;
+   top: 30px;
    left: 2%;
-   img {
-      cursor: pointer;
-   }
+   
 }
 
 .hero__hamburger {
    position: absolute;
-   top: 2%;
+   top: 28px;
    right: 2%;
    cursor: pointer;
 }

@@ -14,11 +14,19 @@ div {
    margin:0;
    padding:0;
 }
+$footer-height: 150px;
 
-.wrappr {
+.wrapper {
    min-height: 100%;
    position: relative;
    overflow: hidden;
+   // &:after {
+   //    content: '';
+   //    display: block;
+   //    height: $footer-height;
+   //    border: 1px solid blue;
+   //    overflow: hidden;
+   //    }
 }
 
 
@@ -37,7 +45,9 @@ h1 {
    color: red;
 }
 
-
+a {
+   text-decoration: none;
+}
 
 p {
    margin: 0;

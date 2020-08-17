@@ -1,0 +1,51 @@
+.hero-blog {
+   height: 350px;
+   position: relative;
+   overflow: hidden;
+   border: 1px soled black;
+}
+.hero-blog__backgtound {
+   width: 100%;
+   img {
+      display: block;
+      width: 100%;
+   }
+}
+.hero-blog__text {
+   margin: 0 auto;
+   width: 275px;
+   text-align: center;
+   @include background-decor('../../img/decor/blog.png');
+   padding-bottom: 80px;
+}
+.blog-text__title {
+   height: 80px;
+   font-size: 63px;
+   font-family: 'Bernier';
+   color: #fff;
+   position: relative;
+   &:after,&:before{
+      @include absolute();
+      @include centered(y);
+      width: 22px;
+      height: 5px;
+      background-color: rgba(#fff, .4);
+   }
+   &:before {
+      left: 40px;
+   }
+   &:after {
+      right: 40px;
+   }
+}
+.hero-blog__title {
+   color: #fff;
+   
+}
+
+.blog-title__under {
+   font-size: 16px;
+   @include roboto(regular);
+   color: #fff;
+}
+
