@@ -7,6 +7,7 @@
    position: relative;
    display: inline-block;
    // margin-bottom: 23px;
+   color: $main-font-color;
    
    
    &:after,&:before{
@@ -14,7 +15,7 @@
       @include centered(y);
       width: 22px;
       height: 5px;
-      // background-color: rgba($main-font-color, .4);
+      background-color: rgba($main-font-color, .4);
    }
    &:before {
       left: 40px;

@@ -1,0 +1,73 @@
+// .reviews {
+//    // width: 200px;
+//    background: url("/img/reviuse.jpg")no-repeat;
+//    background-size: cover;
+// }
+
+.reviews__title {
+   margin-top: 20px;
+   padding: 100px 40px 30px 40px !important;
+   width: 460px;
+   font-size: 63px;
+   line-height: 66px;
+   color: #373e42;
+   text-align: center;
+   @include background-decor("../../img/decor/works.png");
+}
+.reviews__block {
+   background: url("/img/reviuse.jpg")no-repeat;
+   background-size: cover;
+   padding-bottom: 60px;
+}
+.reviews__container {
+   width: 760px;
+   margin: 0 auto;
+   display: flex;
+   .reviews__comments {
+      width: 365px;
+      margin-right: 30px;
+   }
+   .quotes {
+      margin-bottom: 15px;
+   }
+    p {
+      font-size: 16px;
+      @include roboto(regular);
+      color: $main-font-color;
+      line-height: 26px;
+   }
+}
+.visitor {
+   margin-top: 20px;
+   display: flex;
+   .visitor__img-holder {
+      width: 77px;
+      height: 77px;
+      border-radius: 50%;
+      background-color: #ccc;
+      border:1px solid darken(#ccc, 30%);
+      margin-right: 30px;
+      margin-bottom: 70px;
+   }
+   .visitor__data {
+      padding-top: 10px;;
+   }
+   .visitor__name {
+      font-size: 16px;
+      @include roboto(bold);
+      color:#20b5a1;
+   }
+   .visitor__status {
+      font-size: 16px;
+      @include roboto(regular);
+      color:#20b5a1;
+   }
+}
+.arrow-up__container {
+   width: 100%;
+   text-align: center;
+   margin-top: 70px;
+}
+.arrow-up__link {
+   display: inline-block;
+}

@@ -1,0 +1,53 @@
+.connection {
+   width: 390px;
+   margin: 0 auto;
+   background: linear-gradient(#f3efec, #266f79);
+   opacity: .9;
+   backdrop-filter: blur(4px);
+   border-radius: 7px;
+   overflow: hidden;
+   .connection__title {
+      font-size: 35px;
+      padding: 25px 35px ;
+   }
+}
+form {
+   
+   input, textarea {
+      padding: 15px;
+      width: 84%;
+      margin-left: 8%;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      @include roboto(regular);
+      color: #373e42;
+      outline: none;
+   }
+   textarea {
+      resize: none;
+      height: 140px;
+   }
+      
+   .button-box {
+      width: 100%;
+      display: flex;
+      justify-content:space-between;
+   }
+   button {
+      width: 50%;
+      cursor: pointer;
+      padding: 15px 0px;
+      font-size: 15px;
+      @include roboto(medium);
+      background: #268c8b;
+      color: #fff;
+      outline: none;
+      transition: .2s;
+      border: none;
+      &:hover {
+         background: #26bbaa;
+      }
+   }
+}
