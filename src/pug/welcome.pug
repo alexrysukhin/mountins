@@ -1,0 +1,39 @@
+-var name = 'Владимир Астахов';
+
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="stylesheet" href="../css/style.css")
+      title welcome
+   body
+      .wrapper
+         .welcome
+            a(href="#" class="authorization-link")
+               |Авторизоваться
+            .cover.cover-welcome
+               .personality__card.welcome-personality
+                  .personality__img-holder
+                     img(src="../../img/hero-photo.jpg").personality__photo
+                  .personality__name
+                     |#{name}
+                  .personality__subtitle
+                     |Личный сайт веб разработчика
+               .socials-block.welcome-social
+                  a(href="#" class="social__link vk-link")
+                     img(src="../../img/icons/vk.svg").social__vk
+                  a(href="#" class="social__link github-link")
+                     img(src="../../img/icons/github.svg").social__gh
+                  a(href="#" class="social__link in-link")
+                     img(src="../../img/icons/in.svg").social__in
+               .cover__buttons-box
+                  a(href="#" class="buttons-box__button")
+                     |Мои работы
+                  a(href="#" class="buttons-box__button")
+                     |Обо мне
+                  a(href="#" class="buttons-box__button")
+                     |Блог
+            .copiright
+              | &copy; #{name}| создано с любовью в LoftSchool | 2016
+
