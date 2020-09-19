@@ -1,11 +1,19 @@
 .about{
    width: 100%;
    display: flex;
+   position: relative;
+   @include tablets {
+      display: block
+   }
 }
 .about__left, .about__right {
    width: 50%;
-   position: relative;
+   // position: relative;
    padding-bottom: 35px;
+   @include tablets {
+      width: 100%;
+
+   }
 }
 
 
@@ -16,6 +24,7 @@
 
 .about__right {
    background: $beige;
+  
 }
 
 .about__section-title {
@@ -43,11 +52,17 @@
       line-height: 24px;
       margin-bottom: 15px;
    }
+   @include desktop {
+      width: 400px;
+   }
 }
 
 .aboute-data {
    width: 550px;
    margin: 0 auto;
+   @include desktop {
+      width: 85%;
+   }
 }
 
 .aboute-data__title .subtitle {

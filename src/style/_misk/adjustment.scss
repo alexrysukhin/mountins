@@ -1,7 +1,18 @@
 html {
    width: 100%;
    height: 100%;
+   font-size: 16px;
+   @include laptop {
+      font-size: 15px;
+   }
+   @include tablets {
+      font-size: 14px;
+   }
+   @include phones {
+      font-size: 13px;
+   }
 }
+
 body {
    height: 100%;
    margin: 0;
@@ -9,6 +20,8 @@ body {
    font-size: 14px;
    line-height: 1.42;
    -webkit-font-smoothing: antialiased;
+   display:flex;
+   flex-direction: column;
 }
 div {
    margin:0;
@@ -16,17 +29,30 @@ div {
 }
 $footer-height: 150px;
 
+.container {
+   width: 1140px;
+   margin: 0 auto;
+
+   @include desktop {
+      width: 900px;
+   }
+   @include laptop {
+      width: 800px;
+   }
+   @include tablets {
+      width: 590px;
+   }
+   @include phones {
+      width: 95%;
+   }
+}
+
 .wrapper {
-   min-height: 100%;
-   position: relative;
-   overflow: hidden;
-   // &:after {
-   //    content: '';
-   //    display: block;
-   //    height: $footer-height;
-   //    border: 1px solid blue;
-   //    overflow: hidden;
-   //    }
+   // min-height: 100%;
+   // position: relative;
+   // overflow: hidden;
+   flex: 1;
+   
 }
 
 
@@ -59,5 +85,8 @@ p {
 
 
 
-
+.link-box {
+   width: 150px;
+   display: flex;
+}
 

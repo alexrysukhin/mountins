@@ -1,0 +1,112 @@
+.works {
+   position: relative;
+   @include laptop {
+      width: 80%;
+      margin: 0 auto;
+   }
+   @include tablets {
+      width: 100%;
+   }
+}
+
+.user-works__title {
+   margin-top: 20px;
+   @include background-decor('../../img/decor/works.png');
+   color: #373e42;
+}
+
+
+ .slider {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   height: 100vh;
+   min-height: 650px;
+   @include tablets {
+      flex-wrap: nowrap;
+      // height: auto;
+   }
+}
+
+ .slider__school-block{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+
+
+.school-website {
+   width: 450px;
+   text-align: center;
+   padding-bottom: 30px;
+   
+}
+.school-block__title{
+   font-size: 35px;
+   text-align: center;
+   padding-top: 85px;
+   margin-bottom: 15px;
+   // border: 1px solid yellow;
+}
+.school-block__disciplines {
+   font-size: 16px;
+   @include roboto(medium);
+   color: #20b5a1;
+   padding: 18px 0 18px 0;
+   border-top: 1px solid #acd6ce;
+   border-bottom: 1px solid #acd6ce;
+   margin-bottom: 40px;
+}
+
+.school-block__link {
+   color: #bbeee7;
+   background-color: #00bfa5;
+   font-size: 16px;
+   @include roboto(medium);
+   padding: 13px 20px;
+   vertical-align: middle;
+   border-radius: 7px;
+   img {
+      position: relative;
+      top: 4px;
+      margin-right: 5px;
+   }
+}
+.slider__display {
+   background-color: #efebe0;
+   display: flex;
+   justify-content:center; 
+   align-items:center;
+   flex: 4;
+   @include tablets{
+   }
+   img {
+      width: 80%      
+   }
+   @include tablets {
+      width: 100%;
+      order: -1;
+      img{
+         width: 60%
+      }
+   }
+}
+.slider__buttons {
+   display: flex;
+   flex: 1;
+   min-height: 200px;
+   .slider__button{
+      width: 50%;
+   }
+}
+
+.slider__buttons-up {
+   background: url("/img/slider/slader-joga_03.jpg")center center no-repeat;
+   background-size: cover;
+}
+.slider__buttons-down {
+   background: url("/img/slider/shear_03.jpg")center center no-repeat;
+   background-size: cover;
+}

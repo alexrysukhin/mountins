@@ -12,11 +12,16 @@ html(lang="en")
       .wrapper
          include ../sections/portfolio-hero
          section.about
-            .about__left
-               svg(viewbox="0 0 1000 100"
+            svg(viewbox="0 0 1000 100"
                   preserveAspectRatio="none"
-                  class="triangle triangle_fill_white about__triangles")
-                  polygon(points="0,0 0,100 1000,100")
+                  class="triangle triangle-decor")
+                     polygon(points="0,0 0,100 500,100" class="triangle_fill_white" )
+                     polygon(points="500,100 1000,100 1000,0" class="triangle_fill_beige")
+            .about__left
+               //- svg(viewbox="0 0 1000 100"
+               //-    preserveAspectRatio="none"
+               //-    class="triangle triangle_fill_white about__triangles")
+               //-    polygon(points="0,0 0,100 1000,100")
                .title.about__section-title
                   |Обо мне
                .user-about
@@ -29,10 +34,10 @@ html(lang="en")
                      p Я веб разработчик из Новосибирска.Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и    современные проекты.
                      p  Этот сайт я сделал в рамках обучения в Школе онлайн   образования LoftSchool. Чуть позже я освежу в нём свой  контент. А пока посмотрите, как тут всё классно и   красиво!
             .about__right
-               svg(viewbox="0 0 1000 100"
-                  preserveAspectRatio="none"
-                  class="triangle triangle_fill_beige about__triangles")
-                  polygon(points="0,100 1000,100 1000,0")
+               //- svg(viewbox="0 0 1000 100"
+               //-    preserveAspectRatio="none"
+               //-    class="triangle triangle_fill_beige about__triangles")
+               //-    polygon(points="0,100 1000,100 1000,0")
                .aboute-data
                   .aboute-data__description.about-user-info
                      .aboute-data__title
@@ -126,12 +131,14 @@ html(lang="en")
             div#map
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.244210344132!2d36.236172415715316!3d50.00677777941659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAwJzI0LjQiTiAzNsKwMTQnMTguMSJF!5e0!3m2!1sru!2sua!4v1597686228491!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       include ../sections/footer-opacity     
-      a(href="blog.html" class="test-link") 
-         |blog  
-      a(href="works.html" class="test-link") 
-         |works  
+      .link-box
+         a(href="blog.html" class="test-link") 
+            |blog  
+         a(href="works.html" class="test-link") 
+            |works
+         a(href="welcome.html" class="test-link") 
+            |welcome
      
-
 
       
       <script async defer alert('123') src="https://maps.googleapis.com/maps/api/js?   key=AIzaSyA7aBlQWgXoe_iL34wVX0elgc6qSn4KFOo&callback=initMap"></script>   

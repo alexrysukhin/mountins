@@ -31,7 +31,7 @@
 .cover {
    padding-top: 30px;
    width: 380px;
-   background:rgba(228, 232, 235, .9);
+   background:rgba(228, 232, 235, .8);
    border-radius:5px;
    position: absolute;
    @include centered(both);
@@ -43,11 +43,12 @@
       color: #65767f;
       margin-bottom: 35px;
    }
-   .welcome-social {
+   .welcome__socials-green {
       margin:0 auto;
       margin-bottom: 35px;
    }
 }
+
 
 .cover__buttons-box {
    display: flex;
@@ -75,3 +76,9 @@
    text-align: center;
    bottom: 5%;
 }
+
+.social__gh {
+   fill:red;
+}
+
+

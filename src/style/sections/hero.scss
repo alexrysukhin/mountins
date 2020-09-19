@@ -2,34 +2,48 @@
    height: 600px;
    overflow: hidden;
    position: relative;
-}
-.hero__background {
-   width: 100%;
-   img {
-      display: block;
-      width: 100%;
+   // img{ 
+   //    display:block;
+   //    width: 100%;
+      
+   // }
+   @include laptop {
+      height: 500px;
+   }
+   @include tablets {
+      height: 400px;
    }
 }
-.socials-block {
-   width: 130px;
-   vertical-align: middle;
-   display: flex;
-   justify-content: space-between;
+.hero__bg{
+   img{
+      width: 100%;
+      min-height:500px;
+   }
+   
 }
-.hero__socials {
-   width: 140px;
-   line-height: 30px;
-   display: flex;
-   justify-content: space-between;
-   position: absolute;
-   top: 30px;
-   left: 2%;
-}
+
+///////////////////*******hamburger******* ////////
+
 .hero__hamburger {
    position: absolute;
    top: 28px;
    right: 2%;
    cursor: pointer;
+   
+   .hamburger__icon{
+      width: 40px;
+      height: 37px;
+      fill: #fff;
+      @include laptop {
+         width: 30px;
+      }
+      @include tablets {
+      width: 20px;
+      top: 15px;
+   }
+   }
+  
+   
 }
 
 .hero__lining {
@@ -80,6 +94,13 @@
    @include roboto();
    color: #fff;
    margin-top: 20px;
+   @include laptop {
+      margin-top: 10px;
+      font-size: 30px;
+   }
+   @include tablets {
+      font-size: 25px;
+   }
 }
 
 .personality__subtitle {
@@ -87,6 +108,12 @@
    font-weight: #fff;
    @include roboto(light);
    color: #fff;
+   @include laptop {
+      font-size: 15px;
+   }
+   @include tablets {
+      font-size: 14px;
+   }
 }
 
 // .hero__arrow {

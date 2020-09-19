@@ -8,11 +8,28 @@
    @include roboto(medium);
    color: $main-font-color;
    margin-top: 20px;
-
+   @include laptop {
+      text-align: center;
+   }
+   @include tablets {
+      text-align: center;
+      font-size: 23px;
+      margin-top: 25px;
+   }
 }
+
+
 .skill-section__list {
+   width: 100%;
    display: flex;
    flex-wrap: wrap;
+   
+   @include laptop {
+      justify-content: center;
+   }
+   @include tablets {
+      justify-content: center;
+   }
 }
 
 .skill__circle {

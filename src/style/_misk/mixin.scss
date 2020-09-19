@@ -44,3 +44,31 @@
    background-position: center center;
    background-repeat: no-repeat;
 }
+
+//////media
+
+@mixin desktop(){
+   @media screen and (max-width: 1200px){
+      @content;
+   }
+}
+
+@mixin laptop() {
+   @media screen and (max-width: 980px){
+      @content;
+   }
+}
+
+@mixin tablets() {
+   @media screen and(max-width: 768px) {
+      @content;
+   }
+}
+
+@mixin phones() {
+   @media screen and(max-width: 480px) {
+      @content;
+   }
+}
+   
+   

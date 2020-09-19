@@ -1,27 +1,37 @@
+-var name = 'Владимир Астахов';
+
 footer.footer
-   .footer__nav
-      ul.user-nav
-         li.user-nav__item.user-nav
-            a(href="#" class="user-nav__link")
-               |Мои работы
-         li.user-nav__item.user-nav
-            a(href="#" class="user-nav__link")
-               |Обо мне
-         li.user-nav__item.user-nav
-            a(href="#" class="user-nav__link")
-               |Блог
-         li.user-nav__item.user-nav
-            a(href="#" class="user-nav__link")
-               |Авторизация
-      .footer__social.socials-block
-         a(href="#" class="footer__social-link vk-link")
-            img(src="../../img/icons/vk_round.svg").social__vk
-         a(href="#" class="footer__social-link github-link")
-            img(src="../../img/icons/github_round.svg").social__gh
-         a(href="#" class="footer__social-link in-link")
-            img(src="../../img/icons/in_round.svg").social__in
-   .footer__text
-      .text__user-training
-         |Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-      .text__copiright.copiright
-         | &copy; #{name}| создано с любовью в LoftSchool | 2016
+   .container
+      .footer__nav
+         ul.user-nav
+            li.user-nav__item.user-nav
+               a(href="#" class="user-nav__link")
+                  |Мои работы
+            li.user-nav__item.user-nav
+               a(href="#" class="user-nav__link")
+                  |Обо мне
+            li.user-nav__item.user-nav
+               a(href="#" class="user-nav__link")
+                  |Блог
+            li.user-nav__item.user-nav
+               a(href="#" class="user-nav__link")
+                  |Авторизация
+         .footer__social
+            ul.footer__social-list
+               li.footer__social-item
+                  <svg class="footer-icon vk-link">
+                     <use xlink:href="/img/sprite.svg#vk_round"></use>
+                  </svg>
+               li.footer__social-item
+                  <svg class="footer-icon git-link">
+                     <use xlink:href="/img/sprite.svg#git_round"></use>
+                  </svg>
+               li.footer__social-item
+                  <svg class="footer-icon in-link">
+                     <use xlink:href="/img/sprite.svg#in_round"></use>
+                  </svg>
+      .footer__text
+         .text__user-training
+            |Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+         .text__copiright
+            | &copy; #{name}| создано с любовью в LoftSchool | 2016

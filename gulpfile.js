@@ -137,6 +137,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var sassGlob = require('gulp-sass-glob');
+var cssunit = require('gulp-css-unit')
 
 
 
@@ -169,6 +170,10 @@ gulp.task('sass', function(){
         'ie 8'],
             cascade: false
   }))
+    .pipe(cssunit({
+      type: 'px-to-rem',
+      rootSize: 16
+    }))
     .pipe(csso())
   .pipe(sourcemaps.write())
    .pipe(gulp.dest('build/css'));

@@ -18,8 +18,8 @@ html(lang="en")
                   polygon(points="500,100 1000,100 1000,0")
             .title.user-works__title
                | Мои работы
-            .works__content
-               .works__school-block
+            .works__slider.slider
+               .slider__school-block
                   .school-website
                      .title.school-block__title
                         |Сайт школы онлайн образования
@@ -29,7 +29,13 @@ html(lang="en")
                         a(href="#" class="school-block__link")
                            img(src="../../img/icon-button-link.png")
                            |Посмотреть сайт
-               .user-projects
+               .slider__display
+                  img(src="/img/slider/Untitled-1.png")
+               .slider__buttons
+                  .slider__button.slider__buttons-up
+                  .slider__button.slider__buttons-down
+
+               
             .reviews
                .title.reviews__title
                   |ЧТО ОБО МНЕ ГОВОРЯТ

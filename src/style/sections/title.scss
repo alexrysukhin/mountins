@@ -23,5 +23,8 @@
    &:after {
       right: 40px;
    }
+   @include tablets {
+      font-size: 50px;
+   }
    
 }
