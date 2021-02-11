@@ -196,9 +196,9 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
   return gulp.src('./src/scripts/*.js')
   .pipe(concat('all.js'))
-  .pipe(uglify({
-    mangle:{toplevel: true}
-  }))
+  // .pipe(uglify({
+  //   mangle:{toplevel: true}
+  // }))
   .pipe(gulp.dest('./build/js'))
   .pipe(browserSync.stream()); 
 });

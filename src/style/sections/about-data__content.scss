@@ -50,13 +50,21 @@
 }
 .circle__first {
    stroke: #dfdcd5;
+   transition: .5s;
 
 }
 .circle__second {
    fill: none;
    stroke: #10c1a8;
    stroke-dasharray: .0010 282.6;
+   animation-name: slidein;
+   animation-duration: 1s
 }
+
+
+
+
+
 .skill-section__item {
    width: 110px;
    height: 110px;
@@ -64,7 +72,8 @@
    margin-right: 20px;
    margin-top: 15px;
 }
-// .skill__circle .circle-5 {
-//    stroke-dasharray: 142 282.6;
-//    cursor: pointer;
-// }
+.circle-html {
+   // stroke-dasharray: 12 286.6 ;
+   cursor: pointer;
+   
+}
