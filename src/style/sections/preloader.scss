@@ -1,0 +1,78 @@
+.preloader {
+   background: #09b09d;
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 3000;
+   transition: 1s all;
+   visibility: visible;
+}
+.preloader__spiner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.preloader__animation {
+   width: 150px;
+   height: 150px;
+   position: relative;
+   animation: spin 2s linear infinite;
+   &,
+   &:before,
+   &:after {
+      border: 3px solid transparent;
+      border-top-color: white;
+      border-radius: 50%;
+      position: absolute;
+      content: '';
+      display: block;
+   }
+   &:before {
+      $margin: 12px;
+       left: $margin;
+       top: $margin;
+       right: $margin;
+       bottom: $margin;
+       animation: spin 7.5s linear infinite;
+   }
+   &:after {
+      $margin: 5px;
+      left: $margin;
+      top: $margin;
+      right: $margin;
+      bottom: $margin;
+      animation: spin 2s linear infinite;
+   }
+}
+.preloader__percents {
+   position: absolute;
+   font-size: 25px;
+   color: white;
+}
+
+.preloader__not-visible{
+   opacity: 0;
+   visibility: hidden;
+}
+
+////Анимаци 
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg)
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+
+
+
+
+

@@ -10,6 +10,7 @@ html(lang="en")
    body
       .wrapper
          include ../sections/portfolio-hero
+
          .works
             svg(viewbox="0 0 1000 100"
                preserveAspectRatio="none"
@@ -73,7 +74,9 @@ html(lang="en")
                   .arrow-up__container
                      a(href="#" class="works__arrow-up arrow-up__link") 
                         img(src="../../img/icons/arrow-up.svg") 
+               
          include ../sections/footer
+         include ../sections/preloader
 
 
    a(href="about.html" class="test-link")
@@ -81,4 +84,5 @@ html(lang="en")
    a(href="blog.html" class="test-link") 
          |blog 
    .wrapp   
+   <script src="../js/all.js"></script>
       
