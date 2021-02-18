@@ -9,7 +9,14 @@ html(lang="en")
       title Works
    body
       .wrapper
-         include ../sections/portfolio-hero
+         include ../sections/top-section
+         .hero__title.personality__card
+            .personality__img-holder
+               img(src="../../img/hero-photo.jpg").personality__photo
+            .personality__name
+               |#{name}
+            .personality__subtitle
+               |Личный сайт веб разработчика
 
          .works
             svg(viewbox="0 0 1000 100"

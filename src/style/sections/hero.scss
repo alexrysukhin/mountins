@@ -1,25 +1,35 @@
 .hero {
-   height: 600px;
-   overflow: hidden;
+   height: 100vh;   
    position: relative;
+   min-height: 650px;
+   .hero__bg  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
    
    // @include desktop {
-   //    height: 900px;
+      // width: 100vw;
    // }
-   @include laptop {
-      height: 500px;
-   }
-   @include tablets {
-      height: 400px;
-   }
-}
-.hero__bg{
-   img{
-      width: 100%;
-      min-height:500px;
-   }
+   // @include laptop {
+   //    height: 120vw;
+   // }
+   // @include tablets {
+   //    height: 100vh;
+   // }
+
+   
    
 }
+
 
 ///////////////////*******hamburger******* ////////
 
@@ -54,6 +64,7 @@
 }
 .portfolio-lining {
    display: inline-block;
+   width: 80%;
 }
 
 .hero__arrow {
@@ -66,11 +77,12 @@
 
 .hero__title {
    position: absolute;
-   top: 20%;
+   top: 30%;
    left: 50%;
    transform: translatex(-50%);
 }
 .personality__card {
+   // position: absolute;
    text-align: center;
 }
 

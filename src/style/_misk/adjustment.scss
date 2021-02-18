@@ -30,7 +30,7 @@ div {
 $footer-height: 150px;
 
 .container {
-   width: 1140px;
+   max-width: 1140px;
    margin: 0 auto;
 
    @include desktop {
