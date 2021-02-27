@@ -1,32 +1,36 @@
-section.hero  
-   .hero__bg 
-      img(src="../../img/mountains.jpg", alt="")
-      
-   .hero__socials.socials-block
-      <svg class="iicon vk-link">
-         <use xlink:href="/img/sprite.svg#vk"></use>
-      </svg>
-      <svg class="iicon git-link">
-         <use xlink:href="/img/sprite.svg#git"></use>
-      </svg>
-      <svg class="iicon in-link">
-         <use xlink:href="/img/sprite.svg#in"></use>
-      </svg>
-   .hero__hamburger
-      <svg class="hamburger__icon ham-link">
-         <use xlink:href="/img/sprite.svg#ham"></use>
-      </svg>
-   .hero__lining
-      img(src="../../img/decor/portfolio_header.png").portfolio-lining
+.hero__bg 
+   img(src="../../img/mountains.jpg", alt="")
    
-   //- .hero__title.personality__card
-   //-    .personality__img-holder
-   //-       img(src="../../img/hero-photo.jpg").personality__photo
-   //-    .personality__name
-   //-       |#{name}
-   //-    .personality__subtitle
-   //-       |Личный сайт веб разработчика
-
-   .hero__arrow.down-arrow
-      a(href="#" class="arrow-link")
-         img(src="../../img/icons/arrow_down.svg")
+.hero__socials.socials-block
+   <svg class="iicon vk-link">
+      <use xlink:href="/img/sprite.svg#vk"></use>
+   </svg>
+   <svg class="iicon git-link">
+      <use xlink:href="/img/sprite.svg#git"></use>
+   </svg>
+   <svg class="iicon in-link">
+      <use xlink:href="/img/sprite.svg#in"></use>
+   </svg>
+#hero__hamburger
+   <span class='hamburger-part'></span>
+   <span class='hamburger-part'></span>
+   <span class='hamburger-part'></span>
+.hero__nav-menu 
+   ul.nav-menu__list 
+      li.nav-menu__item
+         a(href='works.html' class ='nav-menu__link')
+            |мои работы
+      li.nav-menu__item
+         a(href='blog.html' class ='nav-menu__link')
+            |блог
+      li.nav-menu__item
+         a(href='about.html' class ='nav-menu__link')
+            |обо мне
+      li.nav-menu__item
+         a(href='welcome.html' class ='nav-menu__link')
+            |авторизация
+.hero__lining
+   img(src="../../img/decor/portfolio_header.png").portfolio-lining
+.hero__arrow.down-arrow
+   a(href="#" class="arrow-link")
+      img(src="../../img/icons/arrow_down.svg")

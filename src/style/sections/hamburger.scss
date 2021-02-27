@@ -1,0 +1,278 @@
+#hero__hamburger {
+   // position: relative
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   top: 28px;
+   right: 2%;
+   cursor: pointer;
+   
+   .hamburger-part {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 15%;
+      border-radius: 10px;
+      background: white;
+      margin-bottom: 8px;
+      transition: 1s;
+   }
+   .hamburger-part:nth-child(1) {
+      top:0%;
+      z-index: 3;
+   }
+   .hamburger-part:nth-child(2) {
+      top: 32%;
+      z-index: 5;
+   }
+   .hamburger-part:nth-child(3) {
+      bottom: 0%;
+      z-index: 7;
+   }
+}
+.active {
+   z-index: 30;
+   .hamburger-part:nth-child(2){
+      animation: child2 .5s  forwards;
+   }
+   .hamburger-part:nth-child(1){
+      animation: child1 .8s forwards;
+   }
+   .hamburger-part:nth-child(3){
+      animation: child3 .8s forwards;
+   }
+
+////  анимация крестика
+   @keyframes child2 {
+      0%{background-color: white;}
+      100%{background-color: transparent}
+   }
+
+   @keyframes child1{
+      0%{
+         margin-top: 0px;
+         transform:rotate(0deg)
+      }
+      30%{
+         margin-top: 8px;
+         transform:rotate(30deg)
+      }
+      70%{
+         margin-bottom: 10px;
+         transform:rotate(40deg)
+      }
+      100%{
+         margin-top: 17px;
+         transform:rotate(45deg)
+      }
+   }
+  
+   @keyframes child3 {
+      0%{
+         margin-bottom: 0px;
+         transform:rotate(0deg)
+      }
+      30%{
+         margin-bottom: 8px;
+         transform:rotate(-30deg)
+      }
+      70%{
+         margin-bottom: 10px;
+         transform:rotate(-40deg)
+      }
+      100%{
+         margin-bottom: 16px;
+         transform:rotate(-45deg)
+      }
+   }
+}
+/////!!!!!!!!!!
+.curtain {
+   position: relative;
+   left:0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+
+}
+.curtain:before,.curtain:after {
+   display: block;
+   position: absolute;
+   content: '';
+   height: 100%;
+   width: 50%;
+   z-index: 20;
+   box-sizing: border-box;
+   background: rgba(9, 176, 157, .92);
+   display:none
+}
+.curtain:before {
+   left: -50%;
+   top: 0;
+}
+.curtain:after {
+   right: -50%;
+   top: 0;
+}
+
+//// анимация занавеса
+
+.curtain-active {
+   .curtain:before,.curtain:after{display: block}
+   .curtain:before {
+      animation: curtain-left .8s ease-in forwards;
+
+      @keyframes curtain-left {
+         0%{transform: translateX(0%)}
+         10%{transform: translateX(5%)}
+         20%{transform: translateX(10%)}
+         35%{transform: translateX(30%)}
+         45%{transform: translateX(50%)}
+         55%{transform: translateX(60%)}
+         65%{transform: translateX(70%)}
+         65%{transform: translateX(80%)}
+         70%{transform: translateX(90%)}
+         75%{transform: translateX(100%)}
+         80%{transform: translateX(95%)}
+         85%{transform: translateX(90%)}
+         90%{transform: translateX(95%)}
+         100%{transform: translateX(100.05%)}
+      }
+
+   }
+   .curtain:after {
+      animation: curtain-right .8s ease-in forwards;
+
+      @keyframes curtain-right {
+         0%{transform: translateX(-0%)}
+         10%{transform: translateX(-5%)}
+         20%{transform: translateX(-10%)}
+         35%{transform: translateX(-30%)}
+         45%{transform: translateX(-50%)}
+         55%{transform: translateX(-60%)}
+         65%{transform: translateX(-70%)}
+         65%{transform: translateX(-80%)}
+         70%{transform: translateX(-90%)}
+         75%{transform: translateX(-100%)}
+         80%{transform: translateX(-95%)}
+         85%{transform: translateX(-90%)}
+         90%{transform: translateX(-95%)}
+         100%{transform: translateX(-100.05%)}
+    
+      }
+   }
+}
+// .opacity-curtain {
+//    .curtain:before{
+//       animation: curtain-back1 1.5s forwards;
+
+//       @keyframes curtain-back1 {
+        
+//          0%{opacity: 1;}
+//          100%{opacity: 0;}
+//       }
+//    }
+//    .curtain:after{
+//       animation: curtain-back2 1.5s forwards;
+
+//       @keyframes curtain-back2 {
+         
+//          0%{opacity: 1;}
+//          100%{opacity: 0;}
+//       }
+//    }
+
+  
+// }
+
+.curtain-hide {
+   .curtain:before{
+      animation: hamburger_hide 2s forwards;
+   }
+   // .curtain:after{
+   //    animation: hamburger_hide 1s ;
+   // }
+   
+}
+@keyframes hamburger_hide{
+   0%{display: block}
+   5%{opasity: 1}
+   95%{opacity: 0}
+   100%{display: none}
+}
+
+
+
+/////меню
+
+.hero__nav-menu {
+   position: absolute;
+   text-align: center;
+   top: 30%;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 200;
+   display: none;
+
+   .nav-menu__link {
+      display: block;
+      font-size: 40px;
+      font-family: 'Bernier';
+      color: white;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+      
+   }
+
+   .nav-menu__link:before, .nav-menu__link:after {
+      position: absolute;
+      content: '';
+      display: block;
+      background: white;
+      width: 15px;
+      height: 5px;
+      transition: .1s;
+      
+      
+   }
+   .nav-menu__link:before{
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   .nav-menu__link:after{
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+  
+}
+.nav-menu__link:hover.nav-menu__link:after{
+   background: transparent;
+}
+.nav-menu__link:hover.nav-menu__link:before{
+   background: transparent;
+}
+
+.hero__nav-menu-active{
+   display: block;
+   .nav-menu__list{
+      animation: scales 1.7s  forwards ;
+
+      @keyframes scales{
+         0%{transform: scale(0)}
+         10%{transform: scale(0)}
+         20%{transform: scale(0)}
+         30%{transform: scale(0)}
+         40%{transform: scale(0)}
+         50%{transform: scale(0)}
+         60%{transform: scale(0)}
+         70%{transform: scale(0.9)}
+         80%{transform: scale(1)}
+         90%{transform: scale(1.1)}
+         100%{transform: scale(1)}
+      }
+   }
+
+}  

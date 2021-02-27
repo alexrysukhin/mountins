@@ -1,14 +1,10 @@
  .title {
-   left: 50%;
-   padding: 30px 80px 30px 80px;
-   font-size: 60px;
+   // left: 50%;
    @include centered(x);
    font-family:  'Bernier';
    position: relative;
    display: inline-block;
-   // margin-bottom: 23px;
    color: $main-font-color;
-   
    
    &:after,&:before{
       @include absolute();
@@ -18,10 +14,10 @@
       background-color: rgba($main-font-color, .4);
    }
    &:before {
-      left: 40px;
+      left: -40px;
    }
    &:after {
-      right: 40px;
+      right: -40px;
    }
    @include tablets {
       font-size: 50px;

@@ -1,7 +1,7 @@
 .works {
    position: relative;
    @include laptop {
-      width: 80%;
+      // width: 80%;
       margin: 0 auto;
    }
    @include tablets {
@@ -11,56 +11,101 @@
 
 .user-works__title {
    margin-top: 20px;
+   font-size: 60px;
+   padding: 30px 80px 30px 80px;
    @include background-decor('../../img/decor/works.png');
    color: #373e42;
 }
 
 
- .slider {
+.slider {
    display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
    height: 100vh;
    min-height: 650px;
+   @include desktop{
+      height: 75vh;
+   }
    @include tablets {
-      flex-wrap: nowrap;
-      // height: auto;
+      flex-direction: column;
+      height: auto;
    }
 }
 
- .slider__school-block{
+.slider__description-block{
    height: 100%;
+   min-width: 50%; 
+   width: 50%;
+   background: #f0efe9;
    display: flex;
    justify-content: center;
    align-items: center;
+   @include tablets {
+      width: 100%;
+   }
   
 }
 
 
-.school-website {
+.slider__description-list{
    width: 450px;
+   min-height: 300px;
    text-align: center;
-   padding-bottom: 30px;
-   
+   // padding-bottom: 30px;
+   position: relative;
+   display: block;
+   @include tablets{
+      height: 70%;
+   }
 }
-.school-block__title{
+.slider__description-item {
+   position: absolute;
+   padding-top: 20px;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top:0;
+   display: none;
+}
+.description-item-active {
+   display: block;
+}
+
+
+.slider-description__title{
+   width: 300px;
    font-size: 35px;
-   text-align: center;
-   padding-top: 85px;
-   margin-bottom: 15px;
-   // border: 1px solid yellow;
+   margin: 0 auto;
+   font-family:  'Bernier';
+   color: $main-font-color;
+   position: relative;
+   &:after,&:before{
+      @include absolute();
+      @include centered(y);
+      width: 22px;
+      height: 5px;
+      background-color: rgba($main-font-color, .4);
+   }
+   &:before {
+      left: -40px;
+   }
+   &:after {
+      right: -40px;
+   }
 }
-.school-block__disciplines {
+
+
+.slider-description__disciplines {
+   margin-top: 20px;
    font-size: 16px;
    @include roboto(medium);
    color: #20b5a1;
    padding: 18px 0 18px 0;
    border-top: 1px solid #acd6ce;
    border-bottom: 1px solid #acd6ce;
-   margin-bottom: 40px;
+   // margin-bottom: 40px;
 }
 
-.school-block__link {
+.slider-description__link {
    color: #bbeee7;
    background-color: #00bfa5;
    font-size: 16px;
@@ -68,45 +113,185 @@
    padding: 13px 20px;
    vertical-align: middle;
    border-radius: 7px;
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 10%;
+   
    img {
       position: relative;
       top: 4px;
       margin-right: 5px;
    }
 }
-.slider__display {
+
+.slider__control {
+   width: 100%;
+}
+.slider__main-display {
+   height: 75%;
+   width: 100%;
+   position: relative;
    background-color: #efebe0;
    display: flex;
    justify-content:center; 
    align-items:center;
-   flex: 4;
-   @include tablets{
-   }
-   img {
-      width: 80%      
-   }
+   
+   
+  
+   
    @include tablets {
       width: 100%;
-      order: -1;
-      img{
-         width: 60%
-      }
+      height: 600px;
+      padding: 10px;
+ 
    }
 }
-.slider__buttons {
+.main-slider__list {
+   width: 85%;
+   height: 80%;
+   position: relative;
+   @include tablets{
+      height: 90%;
+      width: 90%;
+   }
+   @include phones {
+      width: 90%;
+      height: 80%;
+   }
+   @include tablets {
+      width: 80%;
+      
+   }
+   
+}
+.main-slider__item {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   transition: 1s;
+   display: none;
+   img {
+      display: block;
+      width: 100%      
+   }     
+}
+ .main-slider__item-active {
+             display: flex;
+          }
+
+
+
+
+
+.slider__bottom-sliders{
    display: flex;
-   flex: 1;
-   min-height: 200px;
-   .slider__button{
+   min-height: 100px;
+   height: 25%;
+   @include tablets{
+      height: 200px;
+   }
+   .slider__bottom{
+      position:relative;
+      overflow: hidden;
       width: 50%;
    }
 }
+.slider__arrow-link{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(84, 84, 64, 0.3);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 100;
+   img{
+      width: 20%;
+   }
+   &:active {
+      .slider__arrow{
+         transform: scale(1.2)
+      }
+   }
+   
 
-.slider__buttons-up {
-   background: url("/img/slider/slader-joga_03.jpg")center center no-repeat;
-   background-size: cover;
 }
-.slider__buttons-down {
-   background: url("/img/slider/shear_03.jpg")center center no-repeat;
-   background-size: cover;
+.slider__bottom-list {
+   border: 1px solid black;
+   background: red;
+   height: 100%;
+   width: 100%;
+   
+   .slider__item-down {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:-100%;
+      transition: 1s;
+   }   
+   .slider__item-up{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom:-100%;
+      transition: 1s;
+   }
+   img{
+      // position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: 0;
+   }
+   
+}
+
+
+.active-down {
+   animation: to-down 1s forwards;
+
+   @keyframes to-down {
+      0%{transform: translateY(0%)}
+      100%{transform: translateY(100%)}
+   }
+}
+.active-up {
+   animation: to-up 1s forwards;
+
+   @keyframes to-up {
+      0%{transform: translateY(0%)}
+      100%{transform: translateY(-100%)}
+   }
+}
+.toStart-down {
+   animation: down 1.5s forwards;
+
+   @keyframes down {
+      0%{transform: translateY(-100%)}
+      50%{transform: translateY(-200%)}
+      100%{transform: translateY(0%)}
+   }
+
+}
+.toStart-up {
+   animation: up 1.5s forwards;
+
+   @keyframes up {
+      0%{transform: translateY(100%)}
+      50%{transform: translateY(200%)}
+      100%{transform: translateY(0%)}
+   }
+
 }

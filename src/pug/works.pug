@@ -9,41 +9,84 @@ html(lang="en")
       title Works
    body
       .wrapper
-         include ../sections/top-section
-         .hero__title.personality__card
-            .personality__img-holder
-               img(src="../../img/hero-photo.jpg").personality__photo
-            .personality__name
-               |#{name}
-            .personality__subtitle
-               |Личный сайт веб разработчика
-
-         .works
-            svg(viewbox="0 0 1000 100"
-               preserveAspectRatio="none"
-               class="triangle triangle-decor")
-                  polygon(points="0,0 0,100 500,100")
-                  polygon(points="500,100 1000,100 1000,0")
-            .title.user-works__title
-               | Мои работы
-            .works__slider.slider
-               .slider__school-block
-                  .school-website
-                     .title.school-block__title
-                        |Сайт школы онлайн образования
-                     .school-block__disciplines
-                        |HTML, CSS, JAVASCRIPT
-                     .school-block__button
-                        a(href="#" class="school-block__link")
-                           img(src="../../img/icon-button-link.png")
-                           |Посмотреть сайт
-               .slider__display
-                  img(src="/img/slider/Untitled-1.png")
-               .slider__buttons
-                  .slider__button.slider__buttons-up
-                  .slider__button.slider__buttons-down
-
-               
+         .curtain
+            section.hero
+               include ../sections/top-section
+               .hero__title
+                  .personality__img-holder
+                     img(src="../../img/hero-photo.jpg").personality__photo
+                  .personality__name
+                     |#{name}
+                  .personality__subtitle
+                     |Личный сайт веб разработчика
+            .works
+               svg(viewbox="0 0 1000 100"
+                  preserveAspectRatio="none"
+                     class="triangle triangle-decor")
+                        polygon(points="0,0 0,100 500,100")
+                        polygon(points="500,100 1000,100 1000,0")
+               .title.user-works__title
+                  | Мои работы
+               .works__slider.slider
+                  .slider__description-block
+                     ul.slider__description-list
+                        li.slider__description-item.description-item-active
+                           .slider-description__title
+                              |Сайт школы онлайн образования
+                           .slider-description__disciplines
+                              |HTML, CSS, JAVASCRIPT
+                           .slider-description__button
+                              a(href="#" class="slider-description__link")
+                                 img(src="../../img/icon-button-link.png")
+                                 |Посмотреть сайт
+                        li.slider__description-item
+                           .slider-description__title
+                              |Сайтыщ ващырпыовлыо ва 
+                           .slider-description__disciplines
+                              |HTML, CSS,и еще что-то JAVASCRIPT
+                           .slider-description__button
+                              a(href="#" class="slider-description__link")
+                                 img(src="../../img/icon-button-link.png")
+                                 |Бубубуб
+                        li.slider__description-item
+                           .slider-description__title
+                              |Сайт 
+                           .slider-description__disciplines
+                              |HTML                           
+                           .slider-description__button
+                              a(href="#" class="slider-description__link")
+                                 img(src="../../img/icon-button-link.png")
+                                 |Посмотреть сайт
+                  .slider__control
+                     .slider__main-display
+                        ul.main-slider__list 
+                           li.main-slider__item.main-slider__item-active
+                              img(src="../../img/slider/slader-joga_03.jpg")
+                           li.main-slider__item
+                              img(src="../../img/slider/shear_03.jpg")
+                           li.main-slider__item
+                              img(src="../../img/slider/Untitled-1.png")
+                     .slider__bottom-sliders
+                        .slider__bottom
+                           a(href = '#' class = 'slider__arrow-link' id ='slider__arrow-down')
+                              img(src="../../img/icons/arrow_down.svg" class = 'slider__arrow')
+                           ul.slider__bottom-list
+                              li.slider__item-down.active-down
+                                 img(src="../../img/slider/Untitled-1.png", alt="")
+                              li.slider__item-down
+                                 img(src="../../img/slider/slader-joga_03.jpg", alt="")
+                              li.slider__item-down
+                                 img(src="../../img/slider/shear_03.jpg", alt="")
+                        .slider__bottom
+                           a(href = '#' class = 'slider__arrow-link' id ='slider__arrow-up')
+                              img(src="../../img/icons/arrow-up.svg" class = 'slider__arrow')
+                           ul.slider__bottom-list 
+                              li.slider__item-up.active-up
+                              img(src="../../img/slider/shear_03.jpg", alt="")
+                              li.slider__item-up
+                                 img(src="../../img/slider/Untitled-1.png", alt="")
+                              li.slider__item-up
+                                 img(src="../../img/slider/slader-joga_03.jpg", alt="")
             .reviews
                .title.reviews__title
                   |ЧТО ОБО МНЕ ГОВОРЯТ
@@ -58,7 +101,7 @@ html(lang="en")
                            .visitor__data
                               .visitor__name Егор Егоров
                               .visitor__status статусный
-                    
+                     
                      .reviews__comments
                         img(src="../../img/quotes.png" class="quotes")
                         .reviews__content
@@ -69,7 +112,7 @@ html(lang="en")
                               .visitor__name Захар Захаров
                               .visitor__status статусовый
                   .connection
-                     .subtitle.connection__title
+                     .title.connection__title
                         |СВЯЗАТЬСЯ СО МНОЙ
                      form(action="#" method="post" enctype="multipart/form-data" class="")
                         input(type="text" name="name" placeholder="Имя" value="" )
@@ -81,15 +124,9 @@ html(lang="en")
                   .arrow-up__container
                      a(href="#" class="works__arrow-up arrow-up__link") 
                         img(src="../../img/icons/arrow-up.svg") 
-               
-         include ../sections/footer
-         include ../sections/preloader
-
-
-   a(href="about.html" class="test-link")
-            |about
-   a(href="blog.html" class="test-link") 
-         |blog 
+                     
+               include ../sections/footer
+               include ../sections/preloader
    .wrapp   
    <script src="../js/all.js"></script>
       
