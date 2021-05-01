@@ -1,5 +1,4 @@
  .title {
-   // left: 50%;
    @include centered(x);
    font-family:  'Bernier';
    position: relative;
@@ -19,8 +18,8 @@
    &:after {
       right: -40px;
    }
-   @include tablets {
-      font-size: 50px;
-   }
+   // @include tablets {
+   //    font-size: 50px;
+   // }
    
 }

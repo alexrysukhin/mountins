@@ -1,0 +1,238 @@
+
+
+.admin-container{
+	max-width: 1140px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include desktop {
+      width: 900px;
+   }
+   @include laptop {
+      width: 800px;
+   }
+   @include tablets {
+      width: 590px;
+		display: block;
+		text-align: center;
+   }
+   @include phones {
+      width: 95%;
+   }
+}
+.admin-header {
+	background-color: #00bfa5;
+	
+	padding:20px 0px;
+	
+}
+.admin-header__title {
+	@include roboto();
+	color: white;
+	font-size: 30px;
+}
+.admin-header__link{
+	@include roboto();
+	color: white;
+	border-bottom: 1px dotted white;
+}
+.tabs-section{
+	background-color: #ccc;
+}
+.tabs-section__list {
+	@include roboto();
+	display:flex;
+	background-color: #ccc;
+	height: 60px;
+	@include tablets{
+		flex-grow: grow;
+	}
+	.tabs-section__item{
+		width: 140px;
+		border-right: 2px solid white;
+		&:hover{
+			background-color: rgba(194, 181, 181, 0.9);
+		}
+		&:nth-child(1){
+			border-left: 2px solid white;
+		}
+		
+	}
+	.activ-tab{
+		background-color: rgba(247, 243, 243,.9);
+		color: white;
+	}
+	.tabs-section__link{
+		// display: inline-block;
+		width: 100%;
+		height: 100%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		color: #455a64
+	}
+}
+
+.admin-menu{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	&:before{
+		display: block;
+		position: absolute;
+		content: '';
+		width:100%;
+		height: 100%;
+		top: 0;
+		background: rgba(247, 243, 243, 0.9);
+		z-index: -20;
+	}
+}
+.admin-menu__bg {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -29;
+	
+}
+.admin-skills__title{
+	@include roboto(regular);
+	color:#455a64;
+	margin: 40px 0;
+	z-index: 100;
+}
+
+// ........Skill-settings
+.admin-skill__menu {
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.admin-menu__lisr{
+	position: relative;
+}
+.admin-menu__item{
+	position: absolute;
+	display: none;
+}
+	
+.admin-menu__item-active{
+	display: block;
+}
+
+.admin-skill__item {
+	width: 45%;
+	@include roboto(regular);
+	color:#455a64;
+	font-size: 17px;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 40px;
+	@include phones{
+		width:40%;
+	// 	padding-right: 5px;
+		margin-right: 0;
+	}
+	
+}
+
+
+.admin-skills__list{
+	padding:20px 0px 20px 15px;
+} 
+.admin-skill-settings__item{
+	@include roboto(light);
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	:nth-child(2){
+		margin-left: auto;
+	}
+}
+.admin-skill-settings__item input{
+	@include roboto(light);
+		text-align: center;
+		font-size: 15px;
+		width: 35px;
+		padding:5px;
+		border: none;
+		height: 25px;
+		border-radius: 5px;
+		outline: 0 !important;
+		margin-right: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.admin-button{
+	margin-top: 10px;
+	width: 110px;
+	@include roboto();
+	background-color: #00bfa5;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	border-radius: 5px;
+
+
+}
+
+// ........******blog settings
+
+.admin-skills__sub-title{
+	font-size: 15px;
+	@include roboto(regular);
+	color: #445a64;
+	margin-bottom:10px;
+}
+#blog-settings-form {
+	width: 400px;
+}
+
+.setings-input {
+	width: 250px;
+	height: 35px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	outline: 0 !important;
+}
+#blog-settings-form textarea{
+	width: 350px;
+	padding: 10px;
+	height: 120px;
+	border: none;
+	border-radius: 3px;
+	resize: none;
+	&:focus{
+		outline: none
+	}
+}
+
+
+#work-setings-form{
+	width: 400px;
+}
+#upload{
+	position: absolute;
+	left: -2500px;
+	// top: -
+}
+.add-file {
+	@include roboto();
+	display:inline-block;
+	padding:10px 15px;
+	border: 1px solid #009688;
+	color: #009688;
+}

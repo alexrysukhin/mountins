@@ -81,8 +81,8 @@ html(lang="en")
                            a(href = '#' class = 'slider__arrow-link' id ='slider__arrow-up')
                               img(src="../../img/icons/arrow-up.svg" class = 'slider__arrow')
                            ul.slider__bottom-list 
-                              li.slider__item-up.active-up
-                              img(src="../../img/slider/shear_03.jpg", alt="")
+                              li.slider__item-up.active-up 
+                                 img(src="../../img/slider/shear_03.jpg", alt="")
                               li.slider__item-up
                                  img(src="../../img/slider/Untitled-1.png", alt="")
                               li.slider__item-up
@@ -114,7 +114,7 @@ html(lang="en")
                   .connection
                      .title.connection__title
                         |СВЯЗАТЬСЯ СО МНОЙ
-                     form(action="#" method="post" enctype="multipart/form-data" class="")
+                     form(action="#" method="post" enctype="multipart/form-data" class="connection-form")
                         input(type="text" name="name" placeholder="Имя" value="" )
                         input(type="text" name="email" value="" placeholder="Email")
                         textarea(name="text" placeholder="Ваше сообщение")

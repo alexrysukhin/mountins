@@ -8,20 +8,20 @@
    @include tablets{
       height: 250px;
    }
-   }
-.footer-opacity {
-   height: $footer-height;
-   background-color: #555b5e;
-   position: relative;
-   opacity: .9;
-   margin-top: -$footer-height;
-   padding-bottom: 25px;
-   @include laptop {
-      height: 175px;
-   }
-   @include tablets{
-      height: 250px;
-   }
+   // }
+// .footer-opacity {
+//    height: $footer-height;
+//    background-color: #555b5e;
+//    position: relative;
+//    opacity: .9;
+//    margin-top: -$footer-height;
+//    padding-bottom: 25px;
+//    @include laptop {
+//       height: 175px;
+//    }
+//    @include tablets{
+//       height: 250px;
+//    }
 }
 .footer:after{
    @include absolute;

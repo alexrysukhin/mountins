@@ -1,5 +1,3 @@
-
-
 .welcome {
    width: 100%;
    height: 100%;   
@@ -13,8 +11,6 @@
    left: 0;
    width: 100%;
    height: 100%;
-   
-   // height: 100vh;
 }
 .parallax__layer {
    height: 100%;
@@ -50,12 +46,7 @@
       position: absolute;
       display: block;
       width: 100%;
-      // height: 100%;
       bottom: 0;
-   // overflow: hidden;
-
-      
-     
    }
 }
 
@@ -94,47 +85,8 @@
       box-shadow: inset 0px 0px 20px #ccc;
    }
 }
-.cover {
-   text-align: center;
-   padding-top: 30px;
-   width: 380px;
-   // height: 40%;
-   background:rgba(228, 232, 235, .8);
-   border-radius:5px;
-   position: absolute;
-   @include centered(both);
-   // top:0;
-   overflow: hidden;
-   .personality__name {
-      color: $main-font-color;
-   }
-   .personality__subtitle {
-      color: #65767f;
-      margin-bottom: 35px;
-   }
-   .welcome__socials-green {
-      margin:0 auto;
-      margin-bottom: 35px;
-   }
-}
 
 
-.cover__buttons-box {  
-   display: flex;
-   justify-content: space-between;
-   .buttons-box__button{
-      display: inline-block;
-      padding: 15px 31px;
-      font-size: 16px;
-      @include roboto(medium);
-      color: #fff;
-      background: #0ab19e;
-      transition: .2s;
-      &:hover {
-         background: #088d85;
-      }
-   }
-}
 
 .copiright {
    position: absolute;
@@ -145,63 +97,3 @@
    text-align: center;
    bottom: 5%;
 }
-
-.social__gh {
-   fill:red;
-}
-
-
-
-
-/////vertical parallax
-// .vertical-paralax {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 100%;
-// }
-// .ver-paralax__layer {
-//    height: 100%;
-//    position: absolute;
-//    width: 3000px;
-//    top: 40%;
-//    left: 50%;
-//    margin-left:-1050px;
-//    @include desktop {
-//       top: 60%;
-//       margin-left:-900px;
-//    }
-//    @include laptop{
-//       top: 45%;
-//       // margin-left:-1050px;
-      
-//    }
-//    @include tablets {
-//       top: 0;
-//    }
-//    @include phones {
-//       top: 30%;
-//    }
-   
-
-
-//    img {
-//       width: 70%;
-//       position: absolute;
-//       bottom: 0;
-//       @include desktop {
-//          width:70%;
-//          // width:55%;
-//       }
-//       // @include laptop {
-//       //    width: 70%;
-//       // }
-//       @include tablets {
-//          width: 70%;
-//       }
-//       @include phones {
-//          width: 70%;
-//       }
-//    }
-// }

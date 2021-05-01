@@ -2,59 +2,104 @@
 
 <!DOCTYPE html>
 html(lang="en")
-   head
-      meta(charset="UTF-8")
-      meta(name="viewport", content="width=device-width, initial-scale=1.0")
-      link(rel="stylesheet" href="../css/style.css")
-      title welcome
-   body
-      .wrapper
-         .welcome
-            #parallax
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.7.png")
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.6.png")
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.5.png")
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.4.png")
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.3.png")
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.2.png" )
-               .parallax__layer
-                  img(src="/img/parallax-mountains/Layer-0.1.png")
-               .parallax__cloud
-                  img(src="/img/parallax-mountains/cloud_first.png")
-            a(href="#" class="authorization-link")
-               |Авторизоваться
-            .cover.cover-welcome
-               .personality__card.welcome-personality
-                  .personality__img-holder
-                     img(src="../../img/hero-photo.jpg").personality__photo
-                  .personality__name
-                     |#{name}
-                  .personality__subtitle
-                     |Личный сайт веб разработчика
-               .socials-block.welcome__socials-green
-                  <svg class="iicon vk-link">
-                     <use xlink:href="/img/sprite.svg#vk"></use>
-                  </svg>
-                  <svg class="iicon git-link">
-                     <use xlink:href="/img/sprite.svg#git"></use>
-                  </svg>
-                  <svg class="iicon in-link">
-                     <use xlink:href="/img/sprite.svg#in"></use>
-                  </svg>
-               .cover__buttons-box
-                  a(href="works.html" class="buttons-box__button")
-                     |Мои работы
-                  a(href="about.html" class="buttons-box__button")
-                     |Обо мне
-                  a(href="blog.html" class="buttons-box__button")
-                     |Блог
-            .copiright
-              | &copy; #{name}| создано с любовью в LoftSchool | 2016
-         include ../sections/preloader
-      script(src="../js/all.js")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="../css/style.css")
+		title welcome
+	body
+		.wrapper
+			.welcome
+				#parallax
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.7.png")
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.6.png")
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.5.png")
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.4.png")
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.3.png")
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.2.png" )
+					.parallax__layer
+						img(src="/img/parallax-mountains/Layer-0.1.png")
+					.parallax__cloud
+						img(src="/img/parallax-mountains/cloud_first.png")
+				a(href="#" class="authorization-link")
+					|Авторизоваться
+				div.cover-container
+					.cover.cover-welcome
+						.personality__card.welcome-personality
+							.personality__img-holder
+								img(src="../../img/hero-photo.jpg").personality__photo
+							.personality__name
+								|#{name}
+							.personality__subtitle
+								|Личный сайт веб разработчика
+							.socials-block.welcome__socials-green
+								<svg class="iicon vk-link">
+									<use xlink:href="/img/sprite.svg#vk"></use>
+								</svg>
+								<svg class="iicon git-link">
+									<use xlink:href="/img/sprite.svg#git"></use>
+								</svg>
+								<svg class="iicon in-link">
+									<use xlink:href="/img/sprite.svg#in"></use>
+								</svg>
+						ul.cover__buttons-list
+							li.cover__buttons-item
+								a(href="works.html" class="buttons-box__button ")
+									|Мои работы
+							li.cover__buttons-item
+								a(href="about.html" class="buttons-box__button ")
+									|Обо мне
+							li.cover__buttons-item
+								a(href="blog.html" class="buttons-box__button ")
+									|Блог
+					.cover.cover-initialization
+						h2.title.initialization-title 
+							|Авторизуйтесь
+						form(method="post" id="initialization-form")
+							.input-icon-block 
+								input(type="text" name="login" placeholder="Логин" id="initialization-input") 
+								<svg class="initialization-Icon">
+									<use xlink:href="/img/sprite.svg#login-icon"></use>
+								</svg>
+							.input-icon-block 
+								input(type="password" name="login" placeholder="Пароль" id="initialization-input") 
+								<svg class="initialization-Icon">
+									<use xlink:href="/img/sprite.svg#pasword-icon"></use>
+								</svg>
+							label.label-chexkbox
+								input(type="checkbox" id="not-robot" )
+								span.checkbox
+								span Я человек
+							p.initialization-question 
+								|Вы точно не робот?
+							.initialization-radio-container
+								.radio-block
+									input(type="radio" name="not-robot" class="radio-input" id="radio_1")
+									label(for="radio_1" class="radio-label") Да 
+								.radio-block
+									input(type="radio" name="not-robot" class="radio-input" id="radio_2")
+									label(for="radio_2" class="radio-label") Не уверен
+							ul.cover__buttons-list 
+								li.cover__buttons-item
+									a(href="about.html" class="buttons-box__button ")
+										|На главную
+								li.cover__buttons-item
+									a(href="#" class="buttons-box__button ")
+										|Войти
+								
+						//- 		label(for="not-robot" value="Я не робот") 
+						//- .icon-block
+						//- <svg class="iicon login-Icon">
+						//- 	<use xlink:href="/img/sprite.svg#login-icon"></use>
+						//- </svg>
+				.copiright
+					| &copy; #{name}| создано с любовью в LoftSchool | 2016
+			include ../sections/preloader
+		script(src="../js/all.js")
+	
