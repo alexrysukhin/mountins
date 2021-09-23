@@ -1,3 +1,4 @@
+
 if (document.querySelector('.tabs-section__list ') != null) {
 	document.querySelector('.tabs-section__list ').addEventListener('click', function (e) {
 
@@ -6,7 +7,6 @@ if (document.querySelector('.tabs-section__list ') != null) {
 		let tabList = Array.from(document.getElementsByClassName('tabs-section__link'));
 		let settingsList = Array.from(document.getElementsByClassName('admin-menu__item'));
 		let indexOfTab = tabList.indexOf(event.target);
-
 
 		if (event.target.classList.contains('activ-tab')) return;
 
@@ -25,7 +25,7 @@ if (document.querySelector('.tabs-section__list ') != null) {
 
 	});
 
-	let nodemon = require('nodemon');
 }
+
 
 

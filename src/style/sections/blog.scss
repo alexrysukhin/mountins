@@ -86,7 +86,7 @@
    padding-bottom: 130px;
    position: relative;
    
-   h2 {
+   .blog-content__title {
       font-size: 35px;
       font-family: 'Bernier';
       color: $main-font-color;
@@ -94,14 +94,14 @@
       margin-bottom: 15px;
    }
 
-   h4 {
+   .blog-content__date {
       font-size: 16px;
       display: inline-block;
       @include roboto(regular);
       color: #00bfa5;
       margin-bottom: 20px;
    }
-   p {
+   .blog-content__text {
       margin-bottom: 20px;
       font-size: 16px;
       @include roboto(regular);

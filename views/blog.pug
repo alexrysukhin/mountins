@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title blog
+      link(rel="stylesheet" href="../css/style.css")
+   body
+      .wrapper
+         .curtain
+            section.hero
+               include pug-sections/top-section
+               .hero__title
+                  .personality__img-holder
+                     img(src="../img/hero-photo.jpg").personality__photo
+                  .hero-blog__text
+                     .blog-text__title.hero-blog__title
+                        |Блог
+                     .blog-title__under
+                        |Статьи, которые я написал
+            section.blog
+               svg(viewbox="0 0 1000 100"
+                     preserveAspectRatio="none"
+                     class="triangle triangle-decor")
+                        polygon(points="0,0 0,100 500,100")
+                        polygon(points="500,100 1000,100 1000,0")
+               .blog-container
+                  aside.blog__aside
+                     ul.blog__headlines-list.blog-list
+                        each blog in blogs 
+                           li.blog-item 
+                              a(href="#about-sass" class="block__headlines-link active") #{`${blog.title}`}
+                  .blog-content
+                     ul.blog-content__list
+                        each blog in blogs 
+                           li.blog-content__item 
+                              h2.blog-content__title #{`${blog.title}`}
+                              h3.blog-content__date #{`${blog.date}`}
+                              h3.blog-content__text #{`${blog.content}`}
+                  //- aside.blog__aside
+                  //-    ul.blog__headlines-list.blog-list
+                  //-       li.blog-item
+                  //-          a(href="#about-sass" class="block__headlines-link active")
+                  //-             |Самое важное в Sass
+                  //-       li.blog-item
+                  //-          a(href="#popular-remedy" class="block__headlines-link")
+                  //-             |Приемы в верстке, без которых не обходится не один сайт
+                  //-       li.blog-item
+                  //-          a(href="#gulp-plagins" class="block__headlines-link")
+                  //-             |Самый необходимый набор Gulp плагинов
+                  //-       li.blog-item
+                  //-          a(href="#about-pug" class="block__headlines-link")
+                  //-             |Почему я выбрал Pug
+                  //- .blog-content
+                  //-    ul.blog-content__list
+                  //-       li.blog-content__item#about-sass
+                  //-          h2.blog-content__title САМОЕ ВАЖНОЕ В SASS
+                  //-          h3.blog-content__date 22 ноября 2016
+                  //-          h4.blog-content__text Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.   Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                  //-          </p>
+                  //-          <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  //-          </p>
+                     //-    li.blog-content__item#popular-remedy
+                     //-       h2 Приемы в верстке, без которых не обходится не один сайт
+                     //-       h4 21 ноября 2016
+                     //-       <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                     //-       </p>
+                     //-       <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                     //-       </p>
+                     //-    li.blog-content__item#gulp-plagins
+                     //-       h2 Cамый необходимый набор GULP плагинов
+                     //-       h4 20 ноября 2016
+                     //-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, vel, delectus saepe architecto quasi voluptate hic quia facilis distinctio minima accusantium dolor pariatur! Magnam sapiente perspiciatis iusto alias eius laboriosam!Libero necessitatibus, tempora mollitia dolorum quod dolore, accusamus molestias ullam veniam unde ipsa possimus nisi eveniet dolorem aliquid nobis quo ab accusantium repellat! Quos eos expedita similique excepturi accusamus. Natus?Voluptatem corrupti quis enim architecto, eveniet sit magni iure, non asperiores beatae a perferendis aut nobis nemo tempora pariatur iusto dicta eaque at eius deleniti! Deleniti quae sed consequatur voluptatem.
+                     //-       </p>
+                     //-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vitae nam nostrum, modi aut molestiae voluptate dolorum sunt beatae iusto impedit magnam culpa quibusdam laborum perferendis earum doloremque! Facilis, tempora.Saepe impedit atque voluptas vitae quasi animi fuga debitis, iste modi delectus facere a labore dicta officiis, tenetur officia sapiente, velit voluptate rem accusantium? Dolorum possimus quis a fugiat quae.Distinctio, expedita illum, qui accusamus recusandae obcaecati modi aperiam voluptates quod quam impedit in. Culpa eos, aliquid eum, architecto aut porro necessitatibus fuga possimus, commodi natus doloribus alias sequi. Incidunt.Deserunt repellat veniam reiciendis ducimus iste? Suscipit perspiciatis ab quas dolorum accusamus sequi optio molestiae quo! Fugiat dignissimos aut cum architecto, voluptates delectus itaque consequuntur, esse, dolore alias error sunt.
+                     //-       </p>
+                     //-    li.blog-content__item#about-pug
+                     //-       h2 Почему я выбрал PUG
+                     //-       h4 18 ноября 2016
+                     //-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, vel, delectus saepe architecto quasi voluptate hic quia facilis distinctio minima accusantium dolor pariatur! Magnam sapiente perspiciatis iusto alias eius laboriosam!Libero necessitatibus, tempora mollitia dolorum quod dolore, accusamus molestias ullam veniam unde ipsa possimus nisi eveniet dolorem aliquid nobis quo ab accusantium repellat! Quos eos expedita similique excepturi accusamus. Natus?Voluptatem corrupti quis enim architecto, eveniet sit magni iure, non asperiores beatae a perferendis aut nobis nemo tempora pariatur iusto dicta eaque at eius deleniti! Deleniti quae sed consequatur voluptatem.
+                     //-       </p>
+                     //-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vitae nam nostrum, modi aut molestiae voluptate dolorum sunt beatae iusto impedit magnam culpa quibusdam laborum perferendis earum doloremque! Facilis, tempora.Saepe impedit atque voluptas vitae quasi animi fuga debitis, iste modi delectus facere a labore dicta officiis, tenetur officia sapiente, velit voluptate rem accusantium? Dolorum possimus quis a fugiat quae.Distinctio, expedita illum, qui accusamus recusandae obcaecati modi aperiam voluptates quod quam impedit in. Culpa eos, aliquid eum, architecto aut porro necessitatibus fuga possimus, commodi natus doloribus alias sequi. Incidunt.Deserunt repellat veniam reiciendis ducimus iste? Suscipit perspiciatis ab quas dolorum accusamus sequi optio molestiae quo! Fugiat dignissimos aut cum architecto, voluptates delectus itaque consequuntur, esse, dolore alias error sunt.
+                     //-       </p>
+            include pug-sections/footer
+            include pug-sections/preloader
+      </div>
+      <script src="../js/all.js"></script>
+     

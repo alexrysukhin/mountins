@@ -5,7 +5,8 @@
 	@include centered(both);
 	border-radius: 5px;
 	position: relative;
-	perspective: 1000;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
 }
 
 

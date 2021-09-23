@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="../css/style.css")
+		title Admin
+	body 
+		header.admin-header 
+			div.admin-container
+				h1.admin-header__title 
+					|Панель администрирования
+				a(href="/about" class="admin-header__link")
+					|Вернуться на сайт
+		section.tabs-section 
+			.admin-container
+				ul.tabs-section__list 
+					li.tabs-section__item
+						a(href="#" class="tabs-section__link activ-tab")
+							|Tab1
+					li.tabs-section__item 
+						a(href="#" class="tabs-section__link")
+							|Tab2
+					li.tabs-section__item 
+						a(href="#" class="tabs-section__link")
+							|Tab3
+					//- li.tabs-section__item 
+					//- 	a(href="#" class="tabs-section__link")
+					//- 		|Tab4
+		section.admin-menu 
+			img.admin-menu__bg(src='/img/mountains.jpg', alt="")
+			.admin-container
+				ul.admin-menu__list 
+					li.admin-menu__item.admin-menu__item-active
+						h2.admin-skills__title Страница "Обо мне"
+						form( method="POST" action="admin/adminskills" id="admin-skill__form") 
+							ul.admin-skill__menu
+								li.admin-skill__item 
+									|Frontend 
+									ul.admin-skills__list 	
+										li.admin-skill-settings__item
+											span Html 
+											input(type="number" name="htmlSkill")
+											span %
+										li.admin-skill-settings__item 
+											span CSS 
+											input(type="number" name="cssSkill")
+											span %
+										li.admin-skill-settings__item 
+											span JavaScript 
+											input(type="number" name="jsSkill")
+											span %
+								li.admin-skill__item 
+									|Workflow
+									ul.admin-skills__list  	
+										li.admin-skill-settings__item 
+											span Git 
+											input(type="number" name="gitSkill")
+											span %
+										li.admin-skill-settings__item
+											span Gulp 
+											input(type="number" name="gulpSkill")
+											span %
+								li.admin-skill__item 
+									|Backend
+									ul.admin-skills__list  	
+										//- li.admin-skill-settings__item 
+										//- 	span PHP 
+										//- 	input(type="number" name="nodekill")
+										//- 	span.skill-discipline %
+										li.admin-skill-settings__item
+											span.skill-discipline Node.js 
+											input(type="number" name="nodeSkill")
+											span %
+										li.admin-skill-settings__item 
+											span.skill-discipline Mongo.db 
+											input(type="number" name="mongoSkill")
+											span %
+							input(type="submit" class="skills-submit" value = "Отправить")
+							
+							a(href="#" class='admin-button' id = "admin-skils__save")
+								|Сохранить						
+						li.admin-menu__item
+							h2.admin-skills__title Страница "Блог"
+							p.admin-skills__sub-title Добавить запись
+							form(method="post" action="admin/adminblog" id="blog-settings-form")
+								input( class="setings-input" id="name-of-blog" type="text" name="blogTitle" placeholder="Название") 
+								input( class="setings-input" id="date-of-blog" type="number" name="blogDate" placeholder="Дата")
+								textarea(type="textaria" name="blogText" id = "text-of-blog" placeholder='Содержание')
+								input(type="submit" value="отпарвить")
+							//- a(href="#" class="admin-button" id="admin-blog-add") Добавить
+						li.admin-menu__item
+							h2.admin-skills__title Страница "Мои работы"
+							p.admin-skills__sub-title Добавить запись
+							form(method="post" action="admin/adminworks" id="work-setings-form" enctype="multipart/form-data")
+								input(type="text" class="setings-input" name="title" id="name-of-progect" placeholder="Название проекта") 
+								input(type="text" class="setings-input" name="technologies" id="technologies-of-progect" placeholder="Технологии") 
+								input(type="file" name="picture" id="upload")
+								label(for="upload" class="add-file") Загрузить картинку
+								input(type="submit" value="отпарвить")
+							//- a(href="#" class="admin-button" id="admin-work-add") Добавить
+	<script src="../js/all.js"></script>

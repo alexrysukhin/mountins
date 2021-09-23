@@ -11,10 +11,10 @@ html(lang="en")
       .wrapper
          .curtain
             section.hero
-               include ../sections/top-section
+               include pug-sections/top-section
                .hero__title
                   .personality__img-holder
-                     img(src="../../img/hero-photo.jpg").personality__photo
+                     img(src="../img/hero-photo.jpg").personality__photo
                   .personality__name
                      |#{name}
                   .personality__subtitle
@@ -125,8 +125,8 @@ html(lang="en")
                      a(href="#" class="works__arrow-up arrow-up__link") 
                         img(src="../../img/icons/arrow-up.svg") 
                      
-               include ../sections/footer
-               include ../sections/preloader
+               include pug-sections/footer
+               include pug-sections/preloader
    .wrapp   
    <script src="../js/all.js"></script>
       

@@ -8,6 +8,7 @@ if (button !== null) {
 		e.preventDefault();
 		console.log('lox');
 		let scroll = document.documentElement.scrollTop;
+		console.log(scroll);
 		let int = setInterval(() => {
 			window.scrollTo(0, scroll);
 			scroll += 10;

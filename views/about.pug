@@ -12,10 +12,10 @@ html(lang="en")
       .wrapper
          .curtain
             section.hero
-               include ../sections/top-section
+               include pug-sections/top-section
                .hero__title
                   .personality__img-holder
-                     img(src="../../img/hero-photo.jpg").personality__photo
+                     img(src="../img/hero-photo.jpg").personality__photo
                   .personality__name
                      |#{name}
                   .personality__subtitle
@@ -36,7 +36,7 @@ html(lang="en")
                   .user-about
                      .user-about__img-holder
                         //- .user-about__picter
-                        img(src="../../img/hero-photo1.jpg")
+                        img(src="../img/hero-photo1.jpg")
                      .user-about__title.title
                         |КТО Я
                      .user-about__text 
@@ -137,9 +137,8 @@ html(lang="en")
                                              |Bower
 														
             section.navigation
-               //- div#map
-               //-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.244210344132!2d36.236172415715316!3d50.00677777941659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAwJzI0LjQiTiAzNsKwMTQnMTguMSJF!5e0!3m2!1sru!2sua!4v1597686228491!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            include ../sections/footer  
-            include ../sections/preloader  
+               
+            include pug-sections/footer  
+            include pug-sections/preloader  
            
       script(src='../js/all.js')

@@ -105,6 +105,17 @@
 }
 
 // ........Skill-settings
+
+// .admin-skill__form{
+// 	border: 1px solid black;
+// }
+.skills-submit {
+	background-color: green;
+	color: white;
+	@include roboto;
+	padding: 10px 5px;
+	border: none;
+}
 .admin-skill__menu {
 	width: 600px;
 	display: flex;
