@@ -1,10 +1,11 @@
 let express = require('express');
 let app = express();
 let mongoose = require('mongoose');
-let mongoUrl = "mongodb://localhost:27017/usersdb";
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const upload = require('./middleware/uploadPicture');
+const config = require('config');
+const dbConfig = config.get('Portfolio.dbConfig.dbName');
 
 
 
@@ -18,7 +19,10 @@ const welcomeRouter = require('./routes/welcomeRouter');
 const adminRouter = require('./routes/adminRouter');
 
 
-mongoose.connect(mongoUrl, { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(dbConfig, {
+	useUnifiedTopology: true,
+	useNewUrlParser: true
+})
 	.then(() => console.log('MongoDB connected.'))
 	.catch((err) => console.log(`${err.name}: ${err.message}`));
 

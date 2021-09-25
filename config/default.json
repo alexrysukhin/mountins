@@ -1,0 +1,8 @@
+{
+	"Portfolio": {
+		"dbConfig": {
+			"port": 3000,
+			"dbName": "mongodb+srv://pms:Tzt9SYaIG6ZaZbfQ@cluster0.3jmcv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+		}
+	}
+}
