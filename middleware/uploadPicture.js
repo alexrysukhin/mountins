@@ -23,7 +23,7 @@ const fileFilter = (request, file, cb) => {
 	} catch (err) {
 		console.log(err.message);
 	}
-}
+};
 
 module.exports = multer({
 	storage, fileFilter

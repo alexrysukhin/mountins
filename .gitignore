@@ -1,8 +1,10 @@
-
 node_modules
 build
 *zip
 *log
 material
 notes.txt
-
+config
+.env
+uploads
+images-for-git

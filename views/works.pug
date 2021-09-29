@@ -1,4 +1,4 @@
--var name = 'Владимир Астахов';
+-var name = 'Александр Рысухин';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -10,11 +10,17 @@ html(lang="en")
    body
       .wrapper
          .curtain
+            .notification.active-notification
+               .notification__card
+                  h2 Приношу свои извенения
+                  p В данный момент эта страница содержит примеры работ, к которым я не имею отношения.Вернее сказать это и не работы вовсе.Просто набор изображений и слов.Механизм работает верно, но контент статичен, он не подгружается из базы данных.
+                  p В скором времени неполадка будет исправлена.
+                  .notification__cross
+                  //-   span.cross
             section.hero
                include pug-sections/top-section
                .hero__title
-                  .personality__img-holder
-                     img(src="../img/hero-photo.jpg").personality__photo
+                  include pug-sections/authorAvatar
                   .personality__name
                      |#{name}
                   .personality__subtitle
@@ -29,34 +35,42 @@ html(lang="en")
                   | Мои работы
                .works__slider.slider
                   .slider__description-block
-                     ul.slider__description-list
+                     ul.slider__description-list 
+                        //- each work in works
+                           //- li.slider__description-item
+                           //-    .slider-description__title #{`${work.progectName}`}
+                           //-    .slider-description__disciplines #{`${work.technologies}`}
+                           //-    .slider-description__button
+                           //-       a(href="#" class="slider-description__link")
+                           //-          img(src="../../img/icon-button-link.png")
+                           //-          |Посмотреть сайт
                         li.slider__description-item.description-item-active
-                           .slider-description__title
-                              |Сайт школы онлайн образования
-                           .slider-description__disciplines
-                              |HTML, CSS, JAVASCRIPT
-                           .slider-description__button
-                              a(href="#" class="slider-description__link")
-                                 img(src="../../img/icon-button-link.png")
-                                 |Посмотреть сайт
+                              .slider-description__title
+                                 |Сайт школы онлайн образования
+                              .slider-description__disciplines
+                                  |HTML, CSS, JAVASCRIPT
+                              .slider-description__button
+                                 a(href="#" class="slider-description__link")
+                                    img(src="../../img/icon-button-link.png")
+                                    |Посмотреть сайт
                         li.slider__description-item
-                           .slider-description__title
-                              |Сайтыщ ващырпыовлыо ва 
-                           .slider-description__disciplines
-                              |HTML, CSS,и еще что-то JAVASCRIPT
-                           .slider-description__button
-                              a(href="#" class="slider-description__link")
-                                 img(src="../../img/icon-button-link.png")
-                                 |Бубубуб
+                              .slider-description__title
+                                 |Сайт школы онлайн образования
+                              .slider-description__disciplines
+                                  |HTML, CSS, JAVASCRIPT
+                              .slider-description__button
+                                 a(href="#" class="slider-description__link")
+                                    img(src="../../img/icon-button-link.png")
+                                    |Посмотреть сайт
                         li.slider__description-item
-                           .slider-description__title
-                              |Сайт 
-                           .slider-description__disciplines
-                              |HTML                           
-                           .slider-description__button
-                              a(href="#" class="slider-description__link")
-                                 img(src="../../img/icon-button-link.png")
-                                 |Посмотреть сайт
+                              .slider-description__title
+                                 |Сайт школы онлайн образования
+                              .slider-description__disciplines
+                                  |HTML, CSS
+                              .slider-description__button
+                                 a(href="#" class="slider-description__link")
+                                    img(src="../../img/icon-button-link.png")
+                                    |Посмотреть сайт
                   .slider__control
                      .slider__main-display
                         ul.main-slider__list 
@@ -89,35 +103,35 @@ html(lang="en")
                                  img(src="../../img/slider/slader-joga_03.jpg", alt="")
             .reviews
                .title.reviews__title
-                  |ЧТО ОБО МНЕ ГОВОРЯТ
+                  |СВЯЗАТЬСЯ СО МНОЙ
                .reviews__block
-                  .reviews__container
-                     .reviews__comments
-                        img(src="../../img/quotes.png" class="quotes")
-                        .reviews__content
-                           p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, ut expedita sunt necessitatibus consequuntur sit veritatis eius animi fugit recusandae voluptatibus, officiis, provident aliquid quo quam dignissimos? Accusamus, mollitia quod.
-                        .visitor
-                           .visitor__img-holder
-                           .visitor__data
-                              .visitor__name Егор Егоров
-                              .visitor__status статусный
+                  //- .reviews__container
+                  //-    .reviews__comments
+                  //-       img(src="../../img/quotes.png" class="quotes")
+                  //-       .reviews__content
+                     //-       p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, ut expedita sunt necessitatibus consequuntur sit veritatis eius animi fugit recusandae voluptatibus, officiis, provident aliquid quo quam dignissimos? Accusamus, mollitia quod.
+                     //-    .visitor
+                     //-       .visitor__img-holder
+                     //-       .visitor__data
+                     //-          .visitor__name Егор Егоров
+                     //-          .visitor__status статусный
                      
-                     .reviews__comments
-                        img(src="../../img/quotes.png" class="quotes")
-                        .reviews__content
-                           p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dignissimos? Accusamus, mollitia quod.
-                        .visitor
-                           .visitor__img-holder
-                           .visitor__data
-                              .visitor__name Захар Захаров
-                              .visitor__status статусовый
+                     //- .reviews__comments
+                     //-    img(src="../../img/quotes.png" class="quotes")
+                     //-    .reviews__content
+                     //-       p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, dignissimos? Accusamus, mollitia quod.
+                     //-    .visitor
+                     //-       .visitor__img-holder
+                     //-       .visitor__data
+                     //-          .visitor__name Захар Захаров
+                     //-          .visitor__status статусовый
                   .connection
                      .title.connection__title
-                        |СВЯЗАТЬСЯ СО МНОЙ
-                     form(action="#" method="post" enctype="multipart/form-data" class="connection-form")
-                        input(type="text" name="name" placeholder="Имя" value="" )
-                        input(type="text" name="email" value="" placeholder="Email")
-                        textarea(name="text" placeholder="Ваше сообщение")
+                        |ЗАПОЛНИТЕ ФОРМУ
+                     form(method="POST" action="/works/emailsend"   class="connection-form")
+                        input(type="text" required name="name" placeholder="Имя"  )
+                        input(type="text" required  name="email" placeholder="Email")
+                        textarea(name="message" required  placeholder="Ваше сообщение")
                         .button-box
                            button(type="submit") Отправить
                            button(type="reset") Очистить

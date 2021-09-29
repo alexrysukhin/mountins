@@ -13,6 +13,3 @@ exports.pageBlog = (request, response) => {
 		}
 	});
 }
-// exports.pageBlog = (request, response) => {
-// 	response.render('blog');
-// }

@@ -109,12 +109,18 @@
 // .admin-skill__form{
 // 	border: 1px solid black;
 // }
-.skills-submit {
-	background-color: green;
+
+.admin-button {
+	background-color: #00bfa5;
 	color: white;
 	@include roboto;
-	padding: 10px 5px;
+	font-size: 14px;
+	padding: 10px 20px;
 	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	display: block
 }
 .admin-skill__menu {
 	width: 600px;
@@ -183,20 +189,20 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
-.admin-button{
-	margin-top: 10px;
-	width: 110px;
-	@include roboto();
-	background-color: #00bfa5;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 40px;
-	border-radius: 5px;
+// .admin-button{
+// 	margin-top: 10px;
+// 	width: 110px;
+// 	@include roboto();
+// 	background-color: #00bfa5;
+// 	color: white;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 40px;
+// 	border-radius: 5px;
 
 
-}
+// }
 
 // ........******blog settings
 
@@ -238,12 +244,16 @@ input[type='number'] {
 #upload{
 	position: absolute;
 	left: -2500px;
-	// top: -
 }
-.add-file {
+.upload__add-file {
 	@include roboto();
 	display:inline-block;
 	padding:10px 15px;
 	border: 1px solid #009688;
 	color: #009688;
+}
+.upload__display{
+	margin-left: 30px;
+	color:#009688;
+	@include roboto;
 }

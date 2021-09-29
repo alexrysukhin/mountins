@@ -77,18 +77,18 @@ html(lang="en")
 											span.skill-discipline Mongo.db 
 											input(type="number" name="mongoSkill")
 											span %
-							input(type="submit" class="skills-submit" value = "Отправить")
+							input(type="submit" class="admin-button" value = "Сохранить")
 							
-							a(href="#" class='admin-button' id = "admin-skils__save")
+							//- a(href="#" class='admin-button' id = "admin-skils__save")
 								|Сохранить						
 						li.admin-menu__item
 							h2.admin-skills__title Страница "Блог"
 							p.admin-skills__sub-title Добавить запись
 							form(method="post" action="admin/adminblog" id="blog-settings-form")
 								input( class="setings-input" id="name-of-blog" type="text" name="blogTitle" placeholder="Название") 
-								input( class="setings-input" id="date-of-blog" type="number" name="blogDate" placeholder="Дата")
+								//- input( class="setings-input" id="date-of-blog" type="number" name="blogDate" placeholder="Дата")
 								textarea(type="textaria" name="blogText" id = "text-of-blog" placeholder='Содержание')
-								input(type="submit" value="отпарвить")
+								input(type="submit" class="admin-button" value="Добавить")
 							//- a(href="#" class="admin-button" id="admin-blog-add") Добавить
 						li.admin-menu__item
 							h2.admin-skills__title Страница "Мои работы"
@@ -96,8 +96,13 @@ html(lang="en")
 							form(method="post" action="admin/adminworks" id="work-setings-form" enctype="multipart/form-data")
 								input(type="text" class="setings-input" name="title" id="name-of-progect" placeholder="Название проекта") 
 								input(type="text" class="setings-input" name="technologies" id="technologies-of-progect" placeholder="Технологии") 
-								input(type="file" name="picture" id="upload")
-								label(for="upload" class="add-file") Загрузить картинку
-								input(type="submit" value="отпарвить")
+								//- input(type="file" name="picture" id="upload")
+								.upload-container
+									//- input(type="file" name="picture" id="upload")
+									label( class="upload__add-file") Загрузить картинку
+										input(type="file" name="picture" id="upload")
+									span.upload__display файл не выбран
+								input(type="submit" class = "admin-button" value="отпарвить")
 							//- a(href="#" class="admin-button" id="admin-work-add") Добавить
 	<script src="../js/all.js"></script>
+	

@@ -1,4 +1,5 @@
-const adminRouter = require('express').Router();
+const express = require('express');
+const adminRouter = express.Router();
 const bodyParser = require('body-parser');
 const upload = require('../middleware/uploadPicture');
 const adminController = require('../controllers/adminController');

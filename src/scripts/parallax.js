@@ -2,8 +2,9 @@ var parallaxContainer = document.querySelector('#parallax');
 
 
 if (parallaxContainer !== null) {
-	console.log(parallaxContainer);
+
 	var layers = parallaxContainer.children;
+	console.log(layers);
 
 	var moveLayers = function (e) {
 		var initialX = (window.innerWidth / 2) - e.pageX,
@@ -12,7 +13,9 @@ if (parallaxContainer !== null) {
 
 
 		[].slice.call(layers).forEach(function (layer, i) {
+			console.log(i);
 			var divider = i / 100,
+
 				positionX = initialX * divider,
 				positionY = initialY * divider,
 				bottomPosition = (window.innerHeight / 2) * divider,

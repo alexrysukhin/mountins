@@ -10,7 +10,15 @@ const worksSchema = new Schema({
 		type: String,
 		required: true
 	},
-	picture: {}
+	img: {
+		type: String,
+		required: true
+	},
+	imgPath: {
+		type: String,
+		required: true
+	}
+
 });
 
-module.exports = mongoose.model('Skills', worksSchema);
+module.exports = mongoose.model('Works', worksSchema);

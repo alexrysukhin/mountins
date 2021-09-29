@@ -27,5 +27,19 @@ if (document.querySelector('.tabs-section__list ') != null) {
 
 }
 
+let inputFile = document.getElementById('upload');
+if (inputFile) {
+	let updateDisplay = document.querySelector('.upload__display');
+
+	inputFile.addEventListener('change', function (evnt) {
+
+		updateDisplay.innerHTML = inputFile.value;
+
+
+	})
+}
+
+
+
 
 

@@ -1,4 +1,4 @@
-// const Works = require('../models/Works');
+const Works = require('../models/Works');
 const Skills = require('../models/Skills');
 const Blog = require('../models/Blog');
 
@@ -9,7 +9,7 @@ exports.pageAdmin = (request, response) => {
 };
 
 exports.skillsSend = (request, response) => {
-
+	console.log(request.body)
 	try {
 		if (!request.body) throw new Error('Ошибка при получении скилов');
 		Skills.findByIdAndUpdate(1, {
@@ -36,15 +36,19 @@ exports.skillsSend = (request, response) => {
 
 
 exports.blogSend = function (request, response) {
+	let date = new Date();
+	let id = `${date.getDate()}${date.getMilliseconds()}`;
+	date = (`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`);
 
 	try {
-		Blog.create({ title: request.body.blogTitle, date: request.body.blogDate, content: request.body.blogText }, function (err, docs) {
-			mongoose.disconnect();
+		Blog.create({
+			_id: id,
+			title: request.body.blogTitle,
+			date: date,
+			content: request.body.blogText
+		}, function (err, docs) {
 
-			if (err) throw new Error('Не удалось загрузить данные blog');
-
-			mongoose.disconnect();
-
+			if (!request.body) throw new Error('Не удалось загрузить данные blog');
 			console.log(docs);
 		});
 		response.redirect('/admin');
@@ -55,11 +59,21 @@ exports.blogSend = function (request, response) {
 };
 
 exports.worksSend = function (request, response) {
+	let { title, technologies, file } = request.body;
 	try {
-		if (!request.body) { throw new Error('Не удалось загрузить данные works') }
-		console.log(request.body.title);
-		console.log(request.body.technologies);
-		console.log(request.file);
+		Works.create({
+			// _id: new mongoose.Types.ObjectId(),
+			progectName: title,
+			technologies: technologies,
+			img: request.file.originalname,
+			imgPath: request.file.path,
+		}, function (err, docs) {
+			if (!request.body) {
+				throw new Error('Не удалось загрузить данные works')
+			}
+			console.log(docs);
+		})
+
 		response.redirect('/admin');
 	} catch (err) {
 		console.log(err);

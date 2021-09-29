@@ -1,4 +1,4 @@
--var name = 'Владимир Астахов';
+-var name = 'Александр Рысухин';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -14,8 +14,7 @@ html(lang="en")
             section.hero
                include pug-sections/top-section
                .hero__title
-                  .personality__img-holder
-                     img(src="../img/hero-photo.jpg").personality__photo
+                  include pug-sections/authorAvatar
                   .personality__name
                      |#{name}
                   .personality__subtitle
@@ -36,12 +35,13 @@ html(lang="en")
                   .user-about
                      .user-about__img-holder
                         //- .user-about__picter
-                        img(src="../img/hero-photo1.jpg")
+                        img(src="../img/my-photo.jpg")
                      .user-about__title.title
                         |КТО Я
                      .user-about__text 
-                        p Я веб разработчик из Новосибирска.Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и    современные проекты.
-                        p  Этот сайт я сделал в рамках обучения в Школе онлайн   образования LoftSchool. Чуть позже я освежу в нём свой  контент. А пока посмотрите, как тут всё классно и   красиво!
+                        p Меня зовут Александр, мне 27лет. Я начинающий веб разработчик.
+                        p 
+                        p  Этот сайт я сделал на основе материалов изученых во время просмотра курсов Школы онлайн   образования LoftSchool. Да-да, не прохождения курсов, а именно их просмотра)
                .about__right
                   //- svg(viewbox="0 0 1000 100"
                   //-    preserveAspectRatio="none"
@@ -65,7 +65,7 @@ html(lang="en")
                                           svg(class="skill__circle"
                                           viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '10' class="circle__second circle-html" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '60' class="circle__second circle-html" transform="rotate(-90 55 55)"></circle>
                                              
                                           .skill__name
                                              |HTML5
@@ -73,16 +73,16 @@ html(lang="en")
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '12' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '60' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
                                              |CSS3
                                     li.skill-section__item
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '9' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '45' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
-                                             |JavaScript & jQuery
+                                             |JavaScript
                            li.skills__item
                               .skills-section
                                  .skill-section__title
@@ -92,28 +92,14 @@ html(lang="en")
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '0' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |php
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%"  skill = '5' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |mySQL
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '11' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '20' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
                                              |Node.js & npm
                                     li.skill-section__item
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '5' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '27' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
                                              |Mongo.db
                            li.skills__item
@@ -125,16 +111,16 @@ html(lang="en")
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '8' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '30' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
                                              |Git
                                     li.skill-section__item
                                        .skill
                                           svg(class="skill__circle" viewBox="0 0 110 110")
                                              <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '1' class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             <circle r="45" cx="50%" cy="50%" skill = '50' class="circle__second" transform="rotate(-90 55 55)"></circle>
                                           .skill__name
-                                             |Bower
+                                             |Gulp
 														
             section.navigation
                

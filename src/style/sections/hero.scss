@@ -40,6 +40,9 @@
 	height: 30px;
 	background: url('/img/icons/arrow_down.svg') 100% 100% no-repeat;
 	cursor: pointer;
+	@include tablets {
+      display: none
+   }
 }
 .hero__arrow {
    position: absolute;

@@ -27,6 +27,20 @@ if (document.querySelector('.tabs-section__list ') != null) {
 
 }
 
+let inputFile = document.getElementById('upload');
+if (inputFile) {
+	let updateDisplay = document.querySelector('.upload__display');
+
+	inputFile.addEventListener('change', function (evnt) {
+
+		updateDisplay.innerHTML = inputFile.value;
+
+
+	})
+}
+
+
+
 
 
 
@@ -148,12 +162,36 @@ if (authorizationButton !== null) {
 //    var map = new google.maps.Map(document.getElementById('map'),opt);
 
 // }
+let notification = document.querySelector('.notification');
+let cross = document.querySelector('.notification__cross');
+let card = document.querySelector('.notification__card')
+
+
+if (notification != null) {
+	// if (notification.classList.contains('active-notification')) {
+	// 	document.body.style.overflow = 'hidden';
+	// }
+	window.addEventListener('load', () => {
+		card.classList.add('notification__card-active');
+		window.scrollTo(0, 0);
+		document.body.style.overflow = 'hidden';
+	})
+
+
+	cross.addEventListener('click', () => {
+		notification.classList.remove('active-notification');
+		document.body.style.overflow = '';
+	})
+}
+
+
 var parallaxContainer = document.querySelector('#parallax');
 
 
 if (parallaxContainer !== null) {
-	console.log(parallaxContainer);
+
 	var layers = parallaxContainer.children;
+	console.log(layers);
 
 	var moveLayers = function (e) {
 		var initialX = (window.innerWidth / 2) - e.pageX,
@@ -162,7 +200,9 @@ if (parallaxContainer !== null) {
 
 
 		[].slice.call(layers).forEach(function (layer, i) {
+			console.log(i);
 			var divider = i / 100,
+
 				positionX = initialX * divider,
 				positionY = initialY * divider,
 				bottomPosition = (window.innerHeight / 2) * divider,
