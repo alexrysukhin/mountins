@@ -14,7 +14,7 @@ ____
 + ### Copy repository link
 
 
-<img src="image-for-git/code-link.png"  width="400" height = "250">
+<img src="public/img/code-link.png"  width="400" height = "250">
 
 + ### Open the folder where you are going to clone the object
 
