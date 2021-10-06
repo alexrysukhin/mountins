@@ -9,8 +9,7 @@ exports.pageAdmin = (request, response) => {
 };
 
 exports.skillsSend = function (request, response) {
-	// console.log(request.body);
-	// let id = 'xxx'
+
 	try {
 		Skills.findByIdAndUpdate('xxx', {
 			_id: "xxx",
@@ -22,7 +21,6 @@ exports.skillsSend = function (request, response) {
 			node: request.body.nodeSkill,
 			mongo: request.body.mongoSkill,
 		}, function (err, docs) {
-			// mongoose.disconnect();
 			if (!request.body) throw new Error('Ошибка при изменении данных.');
 			console.log(docs)
 		})

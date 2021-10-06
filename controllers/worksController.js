@@ -10,7 +10,7 @@ exports.sendEmail = function (request, response) {
 		console.log(request.body);
 		const output = `
 			<p>You have a new contact request</p>
-			<h3>Contaact details</h3>
+			<h3>Contact details</h3>
 			<ul style="list-style-item: none">
 				<li>Name: ${request.body.name}</li>
 				<li>Email: ${request.body.email}</li>
@@ -24,14 +24,14 @@ exports.sendEmail = function (request, response) {
 			secure: false,
 
 			auth: {
-				user: process.env.EMAIL,
-				pass: process.env.PASSWORD
+				user: 'fedorkefir80@gmail.com',
+				pass: 'node.js12345'
 			},
 
 		});
 
 		let mailOptions = {
-			from: "'rysukhinoleksandr@gmail.com' <kruziatus@gmail.com>",
+			from: "'rysukhinoleksandr@gmail.com' <fedorkefir80@gmail.com>",
 			to: 'kruziatus@gmail.com',
 			subject: 'Mountins-form',
 			// text: 'it Works',

@@ -7,8 +7,7 @@ const multer = require('multer');
 const upload = require('./middleware/uploadPicture');
 
 const nodemailer = require('nodemailer')
-const Blog = require('./models/Blog')
-const Skills = require('./models/Skills')
+
 
 const aboutRouter = require('./routes/aboutRouter');
 const blogRouter = require('./routes/blogRouter');
@@ -16,30 +15,13 @@ const worksRouter = require('./routes/worksRouter');
 const welcomeRouter = require('./routes/welcomeRouter');
 const adminRouter = require('./routes/adminRouter');
 
-mongoose.connect(process.env.DB_CONNECT, {
+mongoose.connect('mongodb+srv://pms:Tzt9SYaIG6ZaZbfQ@cluster0.3jmcv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
-	// useFindAndModify: false,
-	// useCreateIndex: true
+
 })
 	.then(() => console.log('MongoDB connected.'))
 	.catch((err) => console.log(`${err.name}: ${err.message}`));
-
-
-
-// Blog.deleteOne({ title: 'Старт' }, function (err, result) {
-// 	// mongoose.disconnect();
-
-// 	if (err) return console.log(err);
-// 	console.log(result);
-// });
-
-// Skills.deleteMany({ gitSkill: 2 }, function (err, result) {
-// 	//  mongoose.disconnect();
-
-// 	if (err) return console.log(err);
-// 	console.log(result);
-// });
 
 
 
@@ -48,7 +30,6 @@ app.set('views', './views');
 
 app.set('view engine', 'pug');
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extebded: false }));
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
@@ -65,6 +46,6 @@ app.use('/', welcomeRouter);
 
 
 
-app.listen(process.env.PORT, () => {
-	console.log(`Server started at port ${process.env.PORT}.`);
+app.listen(3000, () => {
+	console.log(`Server started at port 3000.`);
 });

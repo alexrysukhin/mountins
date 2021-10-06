@@ -29,12 +29,17 @@ $ git clone https://github.com/alexrysukhin/mountins.git
 ____
 # To run on a local machine, you need...
 
-+ ### Enter the command `cd mountins` in the terminal
++ ### Enter the command in the terminal :
 
 ```
 $ cd mountins
 ```
-+ ### Enter the command `npm run server` in the terminal
++ ### Enter the command :
+```
+$ git checkout nodeJsVersion
+```
+
++ ### Enter the command :
 
 
 ```
