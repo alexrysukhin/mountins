@@ -41,7 +41,7 @@ html(lang="en")
                      .user-about__text 
                         p Меня зовут Александр, мне 27лет. Я начинающий веб разработчик.
                         p 
-                        p  Этот сайт я сделал на основе материалов изученых во время просмотра курсов Школы онлайн   образования LoftSchool. Да-да, не прохождения курсов, а именно их просмотра)
+                        p  Этот сайт я сделал на основе материалов изученых во время просмотра курсов Школы онлайн   образования LoftSchool.
                .about__right
                   //- svg(viewbox="0 0 1000 100"
                   //-    preserveAspectRatio="none"
@@ -55,76 +55,74 @@ html(lang="en")
                            |Больше всего меня привлекает Frontend разработка,но я также знаком и могу решать не сложные задачи на Backend.Но давайте по порядку.
                      .about-data__content 
                         ul.skills
-                           li.skills__item
-                              .skills-section
-                                 .skill-section__title
-                                    |Frontend
-                                 ul.skill-section__list
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle"
-                                          viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '60' class="circle__second circle-html" transform="rotate(-90 55 55)"></circle>
-                                             
-                                          .skill__name
-                                             |HTML5
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '60' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |CSS3
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '45' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |JavaScript
-                           li.skills__item
-                              .skills-section
-                                 .skill-section__title
-                                    |Backend
-                                 ul.skill-section__list
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '20' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |Node.js & npm
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '27' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |Mongo.db
-                           li.skills__item
-                              .skills-section
-                                 .skill-section__title
-                                    |WorkFlow
-                                 ul.skill-section__list
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '30' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |Git
-                                    li.skill-section__item
-                                       .skill
-                                          svg(class="skill__circle" viewBox="0 0 110 110")
-                                             <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
-                                             <circle r="45" cx="50%" cy="50%" skill = '50' class="circle__second" transform="rotate(-90 55 55)"></circle>
-                                          .skill__name
-                                             |Gulp
+                           each skill in skills 
+                              li.skills__item
+                                 .skills-section
+                                    .skill-section__title
+                                      |Frontend
+                                    ul.skill-section__list
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.html}`} class="circle__second circle-html" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |HTML5
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.css}`}  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |CSS3
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.js}`}  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |JavaScript
+                              li.skills__item
+                                 .skills-section
+                                    .skill-section__title
+                                       |Backend
+                                    ul.skill-section__list
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.node}`}  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |Node.js & npm
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.mongo}`} class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |Mongo.db
+                              li.skills__item
+                                 .skills-section
+                                    .skill-section__title
+                                       |WorkFlow
+                                    ul.skill-section__list
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.git}`}  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |Git
+                                       li.skill-section__item
+                                          .skill
+                                             svg(class="skill__circle" viewBox="0 0 110 110")
+                                                <circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"></circle>
+                                                <circle r="45" cx="50%" cy="50%" skill = #{`${skill.gulp}`}  class="circle__second" transform="rotate(-90 55 55)"></circle>
+                                             .skill__name
+                                                |Gulp
 														
             section.navigation
                
             include pug-sections/footer  
-            include pug-sections/preloader  
-           
+            include pug-sections/preloader
       script(src='../js/all.js')

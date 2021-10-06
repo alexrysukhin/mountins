@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const skilsSchema = new Schema({
 	_id: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	html: {

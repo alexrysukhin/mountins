@@ -8,7 +8,7 @@ const upload = require('./middleware/uploadPicture');
 
 const nodemailer = require('nodemailer')
 const Blog = require('./models/Blog')
-
+const Skills = require('./models/Skills')
 
 const aboutRouter = require('./routes/aboutRouter');
 const blogRouter = require('./routes/blogRouter');
@@ -29,6 +29,13 @@ mongoose.connect(process.env.DB_CONNECT, {
 
 // Blog.deleteOne({ title: 'Старт' }, function (err, result) {
 // 	// mongoose.disconnect();
+
+// 	if (err) return console.log(err);
+// 	console.log(result);
+// });
+
+// Skills.deleteMany({ gitSkill: 2 }, function (err, result) {
+// 	//  mongoose.disconnect();
 
 // 	if (err) return console.log(err);
 // 	console.log(result);

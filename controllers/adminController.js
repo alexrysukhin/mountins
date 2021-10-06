@@ -8,12 +8,12 @@ exports.pageAdmin = (request, response) => {
 	response.render('admin');
 };
 
-exports.skillsSend = (request, response) => {
-	console.log(request.body)
+exports.skillsSend = function (request, response) {
+	// console.log(request.body);
+	// let id = 'xxx'
 	try {
-		if (!request.body) throw new Error('Ошибка при получении скилов');
-		Skills.findByIdAndUpdate(1, {
-			_id: 1,
+		Skills.findByIdAndUpdate('xxx', {
+			_id: "xxx",
 			html: request.body.htmlSkill,
 			css: request.body.cssSkill,
 			js: request.body.jsSkill,
@@ -21,14 +21,14 @@ exports.skillsSend = (request, response) => {
 			git: request.body.gitSkill,
 			node: request.body.nodeSkill,
 			mongo: request.body.mongoSkill,
-		}, (err, doc) => {
-			mongoose.disconnect();
-			if (err) throw new Error('Ошибка при изменении данных.');
-			console.log(doc);
-			response.redirect('/admin')
-		});
+		}, function (err, docs) {
+			// mongoose.disconnect();
+			if (!request.body) throw new Error('Ошибка при изменении данных.');
+			console.log(docs)
+		})
+		response.redirect('/admin')
 	} catch (err) {
-		cosole.log(err);
+		console.log(err);
 	}
 
 

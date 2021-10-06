@@ -4,7 +4,6 @@ var parallaxContainer = document.querySelector('#parallax');
 if (parallaxContainer !== null) {
 
 	var layers = parallaxContainer.children;
-	console.log(layers);
 
 	var moveLayers = function (e) {
 		var initialX = (window.innerWidth / 2) - e.pageX,
