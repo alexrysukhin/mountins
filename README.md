@@ -39,6 +39,12 @@ $ cd mountins
 $ git checkout nodeJsVersion
 ```
 
++ ### To install dependencies, enter :
+
+```
+$ npm install
+```
+
 + ### Enter the command :
 
 
