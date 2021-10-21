@@ -20,3 +20,8 @@ function loadImage() {
 
    if(percents >= 100) preloader.classList.add('preloader__not-visible');
 };
+
+
+
+
+
